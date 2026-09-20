@@ -1,0 +1,67 @@
+{
+  "id": "monsoon-escalation",
+  "name": "Monsoon escalation over the lower Alaknanda cluster",
+  "provenance": "DEMO_CONFIG",
+  "description": "A scripted sequence of observations for demonstrating live ingest. The sequence is an ASTRA demonstration script, not a record of a real storm: it is what a controllable feed replays so the pipeline can be watched executing on real evidence of the kind a state EOC receives. Each step is posted to POST /events exactly as an external feed would post it, and each triggers a real pipeline run over the real engines. Nothing here is a pre-computed result.",
+  "note": "Rainfall depths are plausible for a Himalayan monsoon burst and are calibrated against the vendored ERA5 archive for this corridor, whose observed wettest day and mean annual maximum bracket the range used here. They are not a forecast and not a record of any actual event.",
+  "steps": [
+    {
+      "delay_ms": 0,
+      "kind": "RAINFALL_OBSERVATION",
+      "lon": 79.34,
+      "lat": 30.41,
+      "radius_m": 6000,
+      "value": 92.0,
+      "source": "IMD-pattern gauge (demonstration feed)",
+      "note": "Sustained rainfall over the lower cluster. Below the extreme-rain threshold, so it raises intensity without adding an extreme-rain day."
+    },
+    {
+      "delay_ms": 2200,
+      "kind": "RAINFALL_OBSERVATION",
+      "lon": 79.331,
+      "lat": 30.402,
+      "radius_m": 7000,
+      "value": 148.0,
+      "source": "IMD-pattern gauge (demonstration feed)",
+      "note": "The burst intensifies and clears the extreme-rain threshold."
+    },
+    {
+      "delay_ms": 2200,
+      "kind": "FIELD_EVIDENCE",
+      "lon": 79.3174,
+      "lat": 30.4324,
+      "radius_m": 1400,
+      "value": 0.78,
+      "source": "District field officer, ground inspection (demonstration feed)",
+      "note": "Tension cracks and seepage reported on the slope above the settlement. Enters the terrain instability input, never the finished score."
+    },
+    {
+      "delay_ms": 2200,
+      "kind": "INCIDENT_REPORT",
+      "lon": 79.3202,
+      "lat": 30.4162,
+      "radius_m": 1200,
+      "value": 3.0,
+      "source": "Tehsil control room (demonstration feed)",
+      "note": "Slope failure across the approach road. Severity weight 3.0 on the same scale the historical inventory uses, and smoothed through the same kernel, so it lands on the same surface in the same units."
+    },
+    {
+      "delay_ms": 2200,
+      "kind": "RAINFALL_OBSERVATION",
+      "lon": 79.34,
+      "lat": 30.423,
+      "radius_m": 12000,
+      "value": 228.0,
+      "source": "IMD-pattern gauge (demonstration feed)",
+      "note": "Cloudburst-scale depth over the whole cluster. Depths of this order are documented for Uttarakhand cloudburst days; the value is a demonstration input, not a forecast."
+    },
+    {
+      "delay_ms": 2200,
+      "kind": "INFRASTRUCTURE_STATUS",
+      "target": "$MOST_DEPENDED_ON_SEGMENT",
+      "value": 1.0,
+      "source": "PWD road control (demonstration feed)",
+      "note": "The road the current plan leans on hardest is reported impassable. The segment id is resolved at replay time from GET /routes/critical-segments, so the feed closes whatever the plan actually depends on rather than a hardcoded edge."
+    }
+  ]
+}

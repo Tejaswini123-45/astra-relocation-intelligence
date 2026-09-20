@@ -1,0 +1,565 @@
+{
+  "generated_at": "2026-09-10T08:48:28.268507+00:00",
+  "model_config_version": "1.10.0",
+  "engine_version": "0.6.0",
+  "backtest": {
+    "variants": [
+      {
+        "id": "as_deployed",
+        "name": "As deployed",
+        "independent": false,
+        "auc": 0.8824,
+        "auc_ci_low": 0.8247,
+        "auc_ci_high": 0.9349,
+        "positives": 18,
+        "background": 2000,
+        "success_curve": [
+          {
+            "area_share": 0.0,
+            "incident_share": 0.0
+          },
+          {
+            "area_share": 0.05,
+            "incident_share": 0.4444444444444444
+          },
+          {
+            "area_share": 0.1,
+            "incident_share": 0.6111111111111112
+          },
+          {
+            "area_share": 0.15,
+            "incident_share": 0.7222222222222222
+          },
+          {
+            "area_share": 0.2,
+            "incident_share": 0.7222222222222222
+          },
+          {
+            "area_share": 0.25,
+            "incident_share": 0.7777777777777778
+          },
+          {
+            "area_share": 0.3,
+            "incident_share": 0.7777777777777778
+          },
+          {
+            "area_share": 0.35,
+            "incident_share": 0.8333333333333334
+          },
+          {
+            "area_share": 0.4,
+            "incident_share": 1.0
+          },
+          {
+            "area_share": 0.45,
+            "incident_share": 1.0
+          },
+          {
+            "area_share": 0.5,
+            "incident_share": 1.0
+          },
+          {
+            "area_share": 0.55,
+            "incident_share": 1.0
+          },
+          {
+            "area_share": 0.6,
+            "incident_share": 1.0
+          },
+          {
+            "area_share": 0.65,
+            "incident_share": 1.0
+          },
+          {
+            "area_share": 0.7,
+            "incident_share": 1.0
+          },
+          {
+            "area_share": 0.75,
+            "incident_share": 1.0
+          },
+          {
+            "area_share": 0.8,
+            "incident_share": 1.0
+          },
+          {
+            "area_share": 0.85,
+            "incident_share": 1.0
+          },
+          {
+            "area_share": 0.9,
+            "incident_share": 1.0
+          },
+          {
+            "area_share": 0.95,
+            "incident_share": 1.0
+          },
+          {
+            "area_share": 1.0,
+            "incident_share": 1.0
+          }
+        ],
+        "area_under_success_curve": 0.8694,
+        "top_10pct_capture": 0.6111,
+        "top_20pct_capture": 0.7222,
+        "note": "The model exactly as it runs. Recorded incidents are one of the landslide sub-model's weighted factors, so this figure is NOT independent of the points it is scored against and will read high. It is reported for comparison, not as evidence."
+      },
+      {
+        "id": "spatial_cv",
+        "name": "Cross-validated (6-fold)",
+        "independent": true,
+        "auc": 0.7872,
+        "auc_ci_low": 0.6816,
+        "auc_ci_high": 0.8801,
+        "positives": 18,
+        "background": 12000,
+        "success_curve": [
+          {
+            "area_share": 0.0,
+            "incident_share": 0.0
+          },
+          {
+            "area_share": 0.05,
+            "incident_share": 0.2777777777777778
+          },
+          {
+            "area_share": 0.1,
+            "incident_share": 0.4444444444444444
+          },
+          {
+            "area_share": 0.15,
+            "incident_share": 0.5555555555555556
+          },
+          {
+            "area_share": 0.2,
+            "incident_share": 0.5555555555555556
+          },
+          {
+            "area_share": 0.25,
+            "incident_share": 0.6666666666666666
+          },
+          {
+            "area_share": 0.3,
+            "incident_share": 0.7222222222222222
+          },
+          {
+            "area_share": 0.35,
+            "incident_share": 0.7222222222222222
+          },
+          {
+            "area_share": 0.4,
+            "incident_share": 0.7777777777777778
+          },
+          {
+            "area_share": 0.45,
+            "incident_share": 0.7777777777777778
+          },
+          {
+            "area_share": 0.5,
+            "incident_share": 0.8333333333333334
+          },
+          {
+            "area_share": 0.55,
+            "incident_share": 0.8333333333333334
+          },
+          {
+            "area_share": 0.6,
+            "incident_share": 0.8888888888888888
+          },
+          {
+            "area_share": 0.65,
+            "incident_share": 0.8888888888888888
+          },
+          {
+            "area_share": 0.7,
+            "incident_share": 1.0
+          },
+          {
+            "area_share": 0.75,
+            "incident_share": 1.0
+          },
+          {
+            "area_share": 0.8,
+            "incident_share": 1.0
+          },
+          {
+            "area_share": 0.85,
+            "incident_share": 1.0
+          },
+          {
+            "area_share": 0.9,
+            "incident_share": 1.0
+          },
+          {
+            "area_share": 0.95,
+            "incident_share": 1.0
+          },
+          {
+            "area_share": 1.0,
+            "incident_share": 1.0
+          }
+        ],
+        "area_under_success_curve": 0.7722,
+        "top_10pct_capture": 0.4444,
+        "top_20pct_capture": 0.5556,
+        "note": "Each incident is scored on a surface built without it: the inventory is split into 6 folds and, for each, the incident-density factor is rebuilt from the other folds only before re-scoring. Background points are scored on the same fold surface, so both sides of every comparison come from one model. The evaluation points never contributed to the surface they are measured on. This is the figure to judge the model by."
+      },
+      {
+        "id": "terrain_only",
+        "name": "Terrain and rainfall only",
+        "independent": true,
+        "auc": 0.6559,
+        "auc_ci_low": 0.5161,
+        "auc_ci_high": 0.7911,
+        "positives": 18,
+        "background": 2000,
+        "success_curve": [
+          {
+            "area_share": 0.0,
+            "incident_share": 0.0
+          },
+          {
+            "area_share": 0.05,
+            "incident_share": 0.2777777777777778
+          },
+          {
+            "area_share": 0.1,
+            "incident_share": 0.3888888888888889
+          },
+          {
+            "area_share": 0.15,
+            "incident_share": 0.4444444444444444
+          },
+          {
+            "area_share": 0.2,
+            "incident_share": 0.4444444444444444
+          },
+          {
+            "area_share": 0.25,
+            "incident_share": 0.4444444444444444
+          },
+          {
+            "area_share": 0.3,
+            "incident_share": 0.4444444444444444
+          },
+          {
+            "area_share": 0.35,
+            "incident_share": 0.5
+          },
+          {
+            "area_share": 0.4,
+            "incident_share": 0.5555555555555556
+          },
+          {
+            "area_share": 0.45,
+            "incident_share": 0.6111111111111112
+          },
+          {
+            "area_share": 0.5,
+            "incident_share": 0.6111111111111112
+          },
+          {
+            "area_share": 0.55,
+            "incident_share": 0.6111111111111112
+          },
+          {
+            "area_share": 0.6,
+            "incident_share": 0.7222222222222222
+          },
+          {
+            "area_share": 0.65,
+            "incident_share": 0.7777777777777778
+          },
+          {
+            "area_share": 0.7,
+            "incident_share": 0.8333333333333334
+          },
+          {
+            "area_share": 0.75,
+            "incident_share": 0.8888888888888888
+          },
+          {
+            "area_share": 0.8,
+            "incident_share": 0.9444444444444444
+          },
+          {
+            "area_share": 0.85,
+            "incident_share": 1.0
+          },
+          {
+            "area_share": 0.9,
+            "incident_share": 1.0
+          },
+          {
+            "area_share": 0.95,
+            "incident_share": 1.0
+          },
+          {
+            "area_share": 1.0,
+            "incident_share": 1.0
+          }
+        ],
+        "area_under_success_curve": 0.65,
+        "top_10pct_capture": 0.3889,
+        "top_20pct_capture": 0.4444,
+        "note": "The incident-density factor is held at zero weight and its share redistributed across the remaining terrain and rainfall factors. Nothing about the recorded inventory reaches this surface, so it answers the strictest form of the question: does the physical model on its own put past failures on dangerous ground?"
+      }
+    ],
+    "per_hazard": [
+      {
+        "hazard": "LANDSLIDE",
+        "auc": 0.884,
+        "positives": 18
+      },
+      {
+        "hazard": "FLOOD",
+        "auc": 0.7949,
+        "positives": 18
+      },
+      {
+        "hazard": "CLOUDBURST",
+        "auc": 0.6803,
+        "positives": 18
+      }
+    ],
+    "headline": "Cross-validated ROC-AUC 0.79 (95% CI 0.68-0.88) against 18 recorded incidents, each scored on a surface built without it. 56% of them fall in the most susceptible fifth of the corridor.",
+    "limitation": "The ceiling of this validation is set by the inventory, not by the model. The NASA Global Landslide Catalogue is compiled from media and official reports, so it is biased towards events near roads and settlements and towards those that caused harm; unreported failures on empty slopes are missing, and every one of them counts here as ground where nothing happened. Coordinates carry a stated accuracy of up to a kilometre. And the sample inside this corridor is small. A back-test against a record like this can show that a model is not working; it cannot prove that one is.",
+    "incidents_in_study_area": 18,
+    "incidents_total": 209,
+    "exclusion_radius_m": 750.0,
+    "folds": 6,
+    "seed": 20260910,
+    "elapsed_ms": 2242.2
+  },
+  "sensitivity": {
+    "runs": 1000,
+    "perturbation": 0.2,
+    "top_k": 5,
+    "spearman_mean": 0.9955,
+    "spearman_median": 0.993,
+    "spearman_p05": 0.986,
+    "spearman_min": 0.972,
+    "top_k_unchanged_share": 0.853,
+    "top_k_baseline": [
+      "H-01",
+      "H-02",
+      "H-07",
+      "H-05",
+      "H-11"
+    ],
+    "habitations": [
+      {
+        "habitation_id": "H-01",
+        "name": "Devgarh Tok",
+        "baseline_rank": 1,
+        "baseline_priority": 61.1,
+        "median_rank": 1.0,
+        "best_rank": 1,
+        "worst_rank": 1,
+        "rank_spread": 0,
+        "priority_p05": 57.9,
+        "priority_p95": 64.0,
+        "stable": true,
+        "note": "Holds its position under every perturbation tested."
+      },
+      {
+        "habitation_id": "H-02",
+        "name": "Naulkhet",
+        "baseline_rank": 2,
+        "baseline_priority": 57.9,
+        "median_rank": 2.0,
+        "best_rank": 2,
+        "worst_rank": 3,
+        "rank_spread": 1,
+        "priority_p05": 56.2,
+        "priority_p95": 59.6,
+        "stable": true,
+        "note": "Holds its position under every perturbation tested."
+      },
+      {
+        "habitation_id": "H-07",
+        "name": "Thalgaon Sera",
+        "baseline_rank": 3,
+        "baseline_priority": 56.8,
+        "median_rank": 3.0,
+        "best_rank": 2,
+        "worst_rank": 4,
+        "rank_spread": 2,
+        "priority_p05": 53.9,
+        "priority_p95": 59.2,
+        "stable": false,
+        "note": "Moves between rank 2 and 4 when the weights are perturbed by 20%; treat its exact position as indicative."
+      },
+      {
+        "habitation_id": "H-05",
+        "name": "Kandara Gaon",
+        "baseline_rank": 4,
+        "baseline_priority": 55.8,
+        "median_rank": 4.0,
+        "best_rank": 3,
+        "worst_rank": 4,
+        "rank_spread": 1,
+        "priority_p05": 53.8,
+        "priority_p95": 57.5,
+        "stable": true,
+        "note": "Holds its position under every perturbation tested."
+      },
+      {
+        "habitation_id": "H-11",
+        "name": "Panduri Sera",
+        "baseline_rank": 5,
+        "baseline_priority": 51.6,
+        "median_rank": 5.0,
+        "best_rank": 5,
+        "worst_rank": 6,
+        "rank_spread": 1,
+        "priority_p05": 49.3,
+        "priority_p95": 53.8,
+        "stable": true,
+        "note": "Holds its position under every perturbation tested."
+      },
+      {
+        "habitation_id": "H-10",
+        "name": "Bhairaunkhal",
+        "baseline_rank": 6,
+        "baseline_priority": 51.1,
+        "median_rank": 6.0,
+        "best_rank": 5,
+        "worst_rank": 6,
+        "rank_spread": 1,
+        "priority_p05": 48.1,
+        "priority_p95": 53.9,
+        "stable": true,
+        "note": "Holds its position under every perturbation tested."
+      },
+      {
+        "habitation_id": "H-09",
+        "name": "Kharsoli Gaon",
+        "baseline_rank": 7,
+        "baseline_priority": 48.8,
+        "median_rank": 7.0,
+        "best_rank": 7,
+        "worst_rank": 7,
+        "rank_spread": 0,
+        "priority_p05": 46.0,
+        "priority_p95": 51.6,
+        "stable": true,
+        "note": "Holds its position under every perturbation tested."
+      },
+      {
+        "habitation_id": "H-03",
+        "name": "Rauligaon",
+        "baseline_rank": 8,
+        "baseline_priority": 42.9,
+        "median_rank": 8.0,
+        "best_rank": 8,
+        "worst_rank": 9,
+        "rank_spread": 1,
+        "priority_p05": 39.4,
+        "priority_p95": 46.0,
+        "stable": true,
+        "note": "Holds its position under every perturbation tested."
+      },
+      {
+        "habitation_id": "H-06",
+        "name": "Simalkot",
+        "baseline_rank": 9,
+        "baseline_priority": 41.5,
+        "median_rank": 9.0,
+        "best_rank": 9,
+        "worst_rank": 10,
+        "rank_spread": 1,
+        "priority_p05": 38.4,
+        "priority_p95": 44.5,
+        "stable": true,
+        "note": "Holds its position under every perturbation tested."
+      },
+      {
+        "habitation_id": "H-12",
+        "name": "Sarauli Tok",
+        "baseline_rank": 10,
+        "baseline_priority": 40.7,
+        "median_rank": 10.0,
+        "best_rank": 8,
+        "worst_rank": 11,
+        "rank_spread": 3,
+        "priority_p05": 37.9,
+        "priority_p95": 43.2,
+        "stable": false,
+        "note": "Moves between rank 8 and 11 when the weights are perturbed by 20%; treat its exact position as indicative."
+      },
+      {
+        "habitation_id": "H-04",
+        "name": "Bansera Tok",
+        "baseline_rank": 11,
+        "baseline_priority": 40.0,
+        "median_rank": 11.0,
+        "best_rank": 10,
+        "worst_rank": 11,
+        "rank_spread": 1,
+        "priority_p05": 37.5,
+        "priority_p95": 42.5,
+        "stable": true,
+        "note": "Holds its position under every perturbation tested."
+      },
+      {
+        "habitation_id": "H-08",
+        "name": "Dungri Tok",
+        "baseline_rank": 12,
+        "baseline_priority": 35.8,
+        "median_rank": 12.0,
+        "best_rank": 12,
+        "worst_rank": 12,
+        "rank_spread": 0,
+        "priority_p05": 33.7,
+        "priority_p95": 37.9,
+        "stable": true,
+        "note": "Holds its position under every perturbation tested."
+      }
+    ],
+    "weights_perturbed": 18,
+    "headline": "Across 1,000 runs perturbing all 18 weights by +/-20%, the habitation ranking holds a median Spearman correlation of 0.993 with the baseline, and the top 5 set is unchanged in 85% of them.",
+    "method": "Every factor weight in every hazard sub-model, and all four top-level priority weights, are multiplied by an independent uniform draw in [1-0.2, 1+0.2] and renormalised so each set still sums to one. The composite is then re-derived from the cached normalised factor surfaces - the same arithmetic the engine does, not an approximation - and the whole ranking is recomputed. The seed is fixed, so this is reproducible.",
+    "seed": 20260910,
+    "elapsed_ms": 31062.7
+  },
+  "confidence": {
+    "mean": 0.6734,
+    "median": 0.6225,
+    "p10": 0.6225,
+    "minimum": 0.6225,
+    "maximum": 0.8385,
+    "bands": [
+      {
+        "band": "HIGH",
+        "cells": 57399,
+        "area_km2": 573.65,
+        "share": 0.3433,
+        "zones": 92,
+        "habitations": 10
+      },
+      {
+        "band": "MEDIUM",
+        "cells": 109785,
+        "area_km2": 1097.2,
+        "share": 0.6567,
+        "zones": 243,
+        "habitations": 2
+      },
+      {
+        "band": "LOW",
+        "cells": 0,
+        "area_km2": 0.0,
+        "share": 0.0,
+        "zones": 0,
+        "habitations": 0
+      }
+    ],
+    "low_confidence_habitations": [],
+    "note": "Confidence is computed from data completeness, provenance mix, evidence recency and spatial resolution, and is never multiplied into the susceptibility score. A cell can be highly susceptible on thin evidence, and the interface has to be able to say so. Across this corridor the surface runs from 0.62 to 0.84: a narrow range, because three of its four inputs barely vary here. Terrain comes from a DEM that covers the whole area, the resolution is the same everywhere, and the provenance mix is near-uniform. What actually varies is the incident record, so the confidence surface in this study area is largely a map of where evidence has been reported. That is a limitation of the corridor, not a defect of the formula, and it is reported rather than dressed up as a richer signal than it is."
+  },
+  "elapsed_ms": 33308.2,
+  "notes": [
+    "Every figure here is produced by scripts/backtest.py from the vendored data and the committed model configuration, with a fixed seed. Nothing is entered by hand and nothing is tuned to look favourable."
+  ]
+}

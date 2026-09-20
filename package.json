@@ -1,0 +1,24 @@
+{
+  "name": "astra",
+  "private": true,
+  "version": "0.1.0",
+  "description": "ASTRA - Proactive Settlement Risk & Relocation Intelligence (SIH26191)",
+  "workspaces": [
+    "apps/web",
+    "packages/contracts"
+  ],
+  "scripts": {
+    "contracts": "npm run generate --workspace @astra/contracts",
+    "dev:web": "npm run dev --workspace @astra/web",
+    "build:web": "npm run build --workspace @astra/web",
+    "lint:web": "npm run lint --workspace @astra/web",
+    "typecheck:web": "npm run typecheck --workspace @astra/web",
+    "e2e": "playwright test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0"
+  }
+}

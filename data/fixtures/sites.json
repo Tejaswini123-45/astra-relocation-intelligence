@@ -1,0 +1,338 @@
+[
+  {
+    "id": "S-01",
+    "name": "Naulkhet Bench",
+    "centroid": {
+      "lon": 79.315139,
+      "lat": 30.414306
+    },
+    "boundary": null,
+    "gross_area_m2": 40928.3,
+    "mean_slope_deg": 0.5,
+    "elevation_m": 1457.0,
+    "distance_to_road_m": 27.0,
+    "existing_shelter_units": 5,
+    "constructable_units": 63,
+    "services": [
+      {
+        "service": "WATER",
+        "supply": 14916.64,
+        "unit": "L/day",
+        "provenance": "SYNTHETIC_CALIBRATED",
+        "source_note": "Assumed existing provision at this candidate site. Would be replaced by an SDMA field survey."
+      },
+      {
+        "service": "SANITATION",
+        "supply": 23.0,
+        "unit": "latrine units",
+        "provenance": "SYNTHETIC_CALIBRATED",
+        "source_note": "Assumed existing provision at this candidate site. Would be replaced by an SDMA field survey."
+      },
+      {
+        "service": "HEALTHCARE",
+        "supply": 0.13,
+        "unit": "facility units",
+        "provenance": "SYNTHETIC_CALIBRATED",
+        "source_note": "Assumed existing provision at this candidate site. Would be replaced by an SDMA field survey."
+      },
+      {
+        "service": "POWER",
+        "supply": 218.14,
+        "unit": "kVA",
+        "provenance": "SYNTHETIC_CALIBRATED",
+        "source_note": "Assumed existing provision at this candidate site. Would be replaced by an SDMA field survey."
+      },
+      {
+        "service": "SHELTER",
+        "supply": 120.0,
+        "unit": "shelter units",
+        "provenance": "SYNTHETIC_CALIBRATED",
+        "source_note": "Assumed existing provision at this candidate site. Would be replaced by an SDMA field survey."
+      }
+    ],
+    "district": "Chamoli",
+    "state": "Uttarakhand",
+    "provenance": "SYNTHETIC_CALIBRATED",
+    "notes": "Candidate extent measured as contiguous buildable ground under 15 degrees slope around the chosen point. Land ownership, tenure and encumbrance are not verified."
+  },
+  {
+    "id": "S-02",
+    "name": "Kandara Terrace",
+    "centroid": {
+      "lon": 79.450972,
+      "lat": 30.465417
+    },
+    "boundary": null,
+    "gross_area_m2": 26194.1,
+    "mean_slope_deg": 1.0,
+    "elevation_m": 1518.0,
+    "distance_to_road_m": 41.0,
+    "existing_shelter_units": 11,
+    "constructable_units": 40,
+    "services": [
+      {
+        "service": "WATER",
+        "supply": 7077.4,
+        "unit": "L/day",
+        "provenance": "SYNTHETIC_CALIBRATED",
+        "source_note": "Assumed existing provision at this candidate site. Would be replaced by an SDMA field survey."
+      },
+      {
+        "service": "SANITATION",
+        "supply": 33.0,
+        "unit": "latrine units",
+        "provenance": "SYNTHETIC_CALIBRATED",
+        "source_note": "Assumed existing provision at this candidate site. Would be replaced by an SDMA field survey."
+      },
+      {
+        "service": "HEALTHCARE",
+        "supply": 0.07,
+        "unit": "facility units",
+        "provenance": "SYNTHETIC_CALIBRATED",
+        "source_note": "Assumed existing provision at this candidate site. Would be replaced by an SDMA field survey."
+      },
+      {
+        "service": "POWER",
+        "supply": 171.44,
+        "unit": "kVA",
+        "provenance": "SYNTHETIC_CALIBRATED",
+        "source_note": "Assumed existing provision at this candidate site. Would be replaced by an SDMA field survey."
+      },
+      {
+        "service": "SHELTER",
+        "supply": 57.0,
+        "unit": "shelter units",
+        "provenance": "SYNTHETIC_CALIBRATED",
+        "source_note": "Assumed existing provision at this candidate site. Would be replaced by an SDMA field survey."
+      }
+    ],
+    "district": "Chamoli",
+    "state": "Uttarakhand",
+    "provenance": "SYNTHETIC_CALIBRATED",
+    "notes": "Candidate extent measured as contiguous buildable ground under 15 degrees slope around the chosen point. Land ownership, tenure and encumbrance are not verified."
+  },
+  {
+    "id": "S-03",
+    "name": "Upper Simalkot Flat",
+    "centroid": {
+      "lon": 79.317917,
+      "lat": 30.391806
+    },
+    "boundary": null,
+    "gross_area_m2": 71215.2,
+    "mean_slope_deg": 1.5,
+    "elevation_m": 1059.0,
+    "distance_to_road_m": 31.0,
+    "existing_shelter_units": 10,
+    "constructable_units": 110,
+    "services": [
+      {
+        "service": "WATER",
+        "supply": 25223.93,
+        "unit": "L/day",
+        "provenance": "SYNTHETIC_CALIBRATED",
+        "source_note": "Assumed existing provision at this candidate site. Would be replaced by an SDMA field survey."
+      },
+      {
+        "service": "SANITATION",
+        "supply": 62.0,
+        "unit": "latrine units",
+        "provenance": "SYNTHETIC_CALIBRATED",
+        "source_note": "Assumed existing provision at this candidate site. Would be replaced by an SDMA field survey."
+      },
+      {
+        "service": "HEALTHCARE",
+        "supply": 0.17,
+        "unit": "facility units",
+        "provenance": "SYNTHETIC_CALIBRATED",
+        "source_note": "Assumed existing provision at this candidate site. Would be replaced by an SDMA field survey."
+      },
+      {
+        "service": "POWER",
+        "supply": 446.96,
+        "unit": "kVA",
+        "provenance": "SYNTHETIC_CALIBRATED",
+        "source_note": "Assumed existing provision at this candidate site. Would be replaced by an SDMA field survey."
+      },
+      {
+        "service": "SHELTER",
+        "supply": 197.0,
+        "unit": "shelter units",
+        "provenance": "SYNTHETIC_CALIBRATED",
+        "source_note": "Assumed existing provision at this candidate site. Would be replaced by an SDMA field survey."
+      }
+    ],
+    "district": "Chamoli",
+    "state": "Uttarakhand",
+    "provenance": "SYNTHETIC_CALIBRATED",
+    "notes": "Candidate extent measured as contiguous buildable ground under 15 degrees slope around the chosen point. Land ownership, tenure and encumbrance are not verified."
+  },
+  {
+    "id": "S-04",
+    "name": "Bhairaun Plateau",
+    "centroid": {
+      "lon": 79.336806,
+      "lat": 30.372083
+    },
+    "boundary": null,
+    "gross_area_m2": 131789.0,
+    "mean_slope_deg": 0.5,
+    "elevation_m": 1569.0,
+    "distance_to_road_m": 186.0,
+    "existing_shelter_units": 13,
+    "constructable_units": 205,
+    "services": [
+      {
+        "service": "WATER",
+        "supply": 25586.86,
+        "unit": "L/day",
+        "provenance": "SYNTHETIC_CALIBRATED",
+        "source_note": "Assumed existing provision at this candidate site. Would be replaced by an SDMA field survey."
+      },
+      {
+        "service": "SANITATION",
+        "supply": 148.0,
+        "unit": "latrine units",
+        "provenance": "SYNTHETIC_CALIBRATED",
+        "source_note": "Assumed existing provision at this candidate site. Would be replaced by an SDMA field survey."
+      },
+      {
+        "service": "HEALTHCARE",
+        "supply": 0.27,
+        "unit": "facility units",
+        "provenance": "SYNTHETIC_CALIBRATED",
+        "source_note": "Assumed existing provision at this candidate site. Would be replaced by an SDMA field survey."
+      },
+      {
+        "service": "POWER",
+        "supply": 648.0,
+        "unit": "kVA",
+        "provenance": "SYNTHETIC_CALIBRATED",
+        "source_note": "Assumed existing provision at this candidate site. Would be replaced by an SDMA field survey."
+      },
+      {
+        "service": "SHELTER",
+        "supply": 442.0,
+        "unit": "shelter units",
+        "provenance": "SYNTHETIC_CALIBRATED",
+        "source_note": "Assumed existing provision at this candidate site. Would be replaced by an SDMA field survey."
+      }
+    ],
+    "district": "Chamoli",
+    "state": "Uttarakhand",
+    "provenance": "SYNTHETIC_CALIBRATED",
+    "notes": "Candidate extent measured as contiguous buildable ground under 15 degrees slope around the chosen point. Land ownership, tenure and encumbrance are not verified."
+  },
+  {
+    "id": "S-05",
+    "name": "Panduri Terrace",
+    "centroid": {
+      "lon": 79.523472,
+      "lat": 30.511528
+    },
+    "boundary": null,
+    "gross_area_m2": 52388.2,
+    "mean_slope_deg": 0.5,
+    "elevation_m": 2092.0,
+    "distance_to_road_m": 246.0,
+    "existing_shelter_units": 0,
+    "constructable_units": 81,
+    "services": [
+      {
+        "service": "WATER",
+        "supply": 12185.46,
+        "unit": "L/day",
+        "provenance": "SYNTHETIC_CALIBRATED",
+        "source_note": "Assumed existing provision at this candidate site. Would be replaced by an SDMA field survey."
+      },
+      {
+        "service": "SANITATION",
+        "supply": 59.0,
+        "unit": "latrine units",
+        "provenance": "SYNTHETIC_CALIBRATED",
+        "source_note": "Assumed existing provision at this candidate site. Would be replaced by an SDMA field survey."
+      },
+      {
+        "service": "HEALTHCARE",
+        "supply": 0.14,
+        "unit": "facility units",
+        "provenance": "SYNTHETIC_CALIBRATED",
+        "source_note": "Assumed existing provision at this candidate site. Would be replaced by an SDMA field survey."
+      },
+      {
+        "service": "POWER",
+        "supply": 291.06,
+        "unit": "kVA",
+        "provenance": "SYNTHETIC_CALIBRATED",
+        "source_note": "Assumed existing provision at this candidate site. Would be replaced by an SDMA field survey."
+      },
+      {
+        "service": "SHELTER",
+        "supply": 172.0,
+        "unit": "shelter units",
+        "provenance": "SYNTHETIC_CALIBRATED",
+        "source_note": "Assumed existing provision at this candidate site. Would be replaced by an SDMA field survey."
+      }
+    ],
+    "district": "Chamoli",
+    "state": "Uttarakhand",
+    "provenance": "SYNTHETIC_CALIBRATED",
+    "notes": "Candidate extent measured as contiguous buildable ground under 15 degrees slope around the chosen point. Land ownership, tenure and encumbrance are not verified."
+  },
+  {
+    "id": "S-06",
+    "name": "Sarauli Bench",
+    "centroid": {
+      "lon": 79.597917,
+      "lat": 30.519306
+    },
+    "boundary": null,
+    "gross_area_m2": 74489.4,
+    "mean_slope_deg": 0.5,
+    "elevation_m": 2259.0,
+    "distance_to_road_m": 262.0,
+    "existing_shelter_units": 10,
+    "constructable_units": 115,
+    "services": [
+      {
+        "service": "WATER",
+        "supply": 26255.93,
+        "unit": "L/day",
+        "provenance": "SYNTHETIC_CALIBRATED",
+        "source_note": "Assumed existing provision at this candidate site. Would be replaced by an SDMA field survey."
+      },
+      {
+        "service": "SANITATION",
+        "supply": 69.0,
+        "unit": "latrine units",
+        "provenance": "SYNTHETIC_CALIBRATED",
+        "source_note": "Assumed existing provision at this candidate site. Would be replaced by an SDMA field survey."
+      },
+      {
+        "service": "HEALTHCARE",
+        "supply": 0.12,
+        "unit": "facility units",
+        "provenance": "SYNTHETIC_CALIBRATED",
+        "source_note": "Assumed existing provision at this candidate site. Would be replaced by an SDMA field survey."
+      },
+      {
+        "service": "POWER",
+        "supply": 427.62,
+        "unit": "kVA",
+        "provenance": "SYNTHETIC_CALIBRATED",
+        "source_note": "Assumed existing provision at this candidate site. Would be replaced by an SDMA field survey."
+      },
+      {
+        "service": "SHELTER",
+        "supply": 225.0,
+        "unit": "shelter units",
+        "provenance": "SYNTHETIC_CALIBRATED",
+        "source_note": "Assumed existing provision at this candidate site. Would be replaced by an SDMA field survey."
+      }
+    ],
+    "district": "Chamoli",
+    "state": "Uttarakhand",
+    "provenance": "SYNTHETIC_CALIBRATED",
+    "notes": "Candidate extent measured as contiguous buildable ground under 15 degrees slope around the chosen point. Land ownership, tenure and encumbrance are not verified."
+  }
+]

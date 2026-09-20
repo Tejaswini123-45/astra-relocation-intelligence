@@ -1,0 +1,50 @@
+{
+  "study_area": "chamoli-alaknanda",
+  "seed": 26191,
+  "model_config_version": "1.8.0",
+  "provenance": "SYNTHETIC_CALIBRATED",
+  "measured_from_real_data": [
+    "placement: Copernicus DEM slope, elevation band, height above nearest drainage, ESA WorldCover buildable classes, distance to the OSM road network",
+    "population: WorldPop 2020 UN-adjusted 1 km population surface integrated over a 0.65 km2 settlement catchment",
+    "site extent: contiguous buildable ground under 15 degrees slope measured on the real surfaces",
+    "livelihood centre: densest populated cell in the corridor on the WorldPop surface"
+  ],
+  "assumed_not_measured": [
+    "demographic composition (elderly, under-five, disability, medical dependency and low-income household shares) - DEMO_CONFIG assumptions for a Himalayan hill district, not census values",
+    "dwelling typology mix, scaled by road remoteness",
+    "service infrastructure supply at each candidate site",
+    "critical facility provision thresholds by settlement size"
+  ],
+  "totals": {
+    "habitations": 12,
+    "population": 2519,
+    "households": 504,
+    "sites": 6,
+    "site_gross_area_m2": 397004.2
+  },
+  "names": {
+    "note": "All habitation and site names are fictional and were chosen not to match any settlement in the corridor.",
+    "habitations": [
+      "Devgarh Tok",
+      "Naulkhet",
+      "Rauligaon",
+      "Bansera Tok",
+      "Kandara Gaon",
+      "Simalkot",
+      "Thalgaon Sera",
+      "Dungri Tok",
+      "Kharsoli Gaon",
+      "Bhairaunkhal",
+      "Panduri Sera",
+      "Sarauli Tok"
+    ],
+    "sites": [
+      "Naulkhet Bench",
+      "Kandara Terrace",
+      "Upper Simalkot Flat",
+      "Bhairaun Plateau",
+      "Panduri Terrace",
+      "Sarauli Bench"
+    ]
+  }
+}

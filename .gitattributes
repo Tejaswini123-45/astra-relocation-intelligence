@@ -1,0 +1,10 @@
+# Normalise line endings so generated files compare byte-identically in CI,
+# whichever platform they were produced on.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.tif binary
+*.tiff binary
+*.zip binary
+*.parquet binary

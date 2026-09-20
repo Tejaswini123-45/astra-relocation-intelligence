@@ -1,0 +1,30 @@
+# Local ASTRA stack. Runs entirely offline once images are built:
+# no external network call is on the critical path of the demo.
+services:
+  api:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    environment:
+      ASTRA_ENV: development
+      ASTRA_CORS_ORIGINS: http://localhost:3000
+      # The LLM narration layer is optional. With no key the API serves
+      # deterministic template narration and reports "template" mode.
+      ASTRA_LLM_ENABLED: "false"
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+      args:
+        NEXT_PUBLIC_ASTRA_API_URL: http://localhost:8000
+    environment:
+      NEXT_PUBLIC_ASTRA_API_URL: http://localhost:8000
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api

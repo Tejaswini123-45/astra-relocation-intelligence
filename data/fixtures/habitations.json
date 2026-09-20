@@ -1,0 +1,496 @@
+[
+  {
+    "id": "H-01",
+    "name": "Devgarh Tok",
+    "centroid": {
+      "lon": 79.319306,
+      "lat": 30.38375
+    },
+    "footprint": null,
+    "population": 167,
+    "households": 33,
+    "demographics": {
+      "elderly_60_plus": 26,
+      "children_under_5": 16,
+      "persons_with_disability": 4,
+      "medically_dependent": 4,
+      "low_income_households": 14
+    },
+    "structure_mix": {
+      "KUTCHA": 0.162325,
+      "SEMI_PUCCA": 0.340894,
+      "PUCCA": 0.496781
+    },
+    "critical_facilities": [
+      {
+        "id": "H-01-F1",
+        "kind": "ANGANWADI",
+        "name": "Anganwadi centre",
+        "location": {
+          "lon": 79.321737,
+          "lat": 30.384154
+        }
+      }
+    ],
+    "livelihood_centre": {
+      "lon": 79.312639,
+      "lat": 30.420694
+    },
+    "elevation_m": 938.0,
+    "block": "Alaknanda corridor (demonstration)",
+    "district": "Chamoli",
+    "state": "Uttarakhand",
+    "provenance": "SYNTHETIC_CALIBRATED"
+  },
+  {
+    "id": "H-02",
+    "name": "Naulkhet",
+    "centroid": {
+      "lon": 79.319583,
+      "lat": 30.414861
+    },
+    "footprint": null,
+    "population": 487,
+    "households": 97,
+    "demographics": {
+      "elderly_60_plus": 68,
+      "children_under_5": 42,
+      "persons_with_disability": 11,
+      "medically_dependent": 13,
+      "low_income_households": 31
+    },
+    "structure_mix": {
+      "KUTCHA": 0.202762,
+      "SEMI_PUCCA": 0.356447,
+      "PUCCA": 0.440791
+    },
+    "critical_facilities": [
+      {
+        "id": "H-02-F1",
+        "kind": "ANGANWADI",
+        "name": "Anganwadi centre",
+        "location": {
+          "lon": 79.318173,
+          "lat": 30.416613
+        }
+      },
+      {
+        "id": "H-02-F2",
+        "kind": "SCHOOL",
+        "name": "Primary school",
+        "location": {
+          "lon": 79.318208,
+          "lat": 30.417295
+        }
+      }
+    ],
+    "livelihood_centre": {
+      "lon": 79.312639,
+      "lat": 30.420694
+    },
+    "elevation_m": 1599.0,
+    "block": "Alaknanda corridor (demonstration)",
+    "district": "Chamoli",
+    "state": "Uttarakhand",
+    "provenance": "SYNTHETIC_CALIBRATED"
+  },
+  {
+    "id": "H-03",
+    "name": "Rauligaon",
+    "centroid": {
+      "lon": 79.387361,
+      "lat": 30.409028
+    },
+    "footprint": null,
+    "population": 141,
+    "households": 28,
+    "demographics": {
+      "elderly_60_plus": 22,
+      "children_under_5": 13,
+      "persons_with_disability": 4,
+      "medically_dependent": 2,
+      "low_income_households": 10
+    },
+    "structure_mix": {
+      "KUTCHA": 0.17351,
+      "SEMI_PUCCA": 0.345196,
+      "PUCCA": 0.481294
+    },
+    "critical_facilities": [],
+    "livelihood_centre": {
+      "lon": 79.312639,
+      "lat": 30.420694
+    },
+    "elevation_m": 1033.0,
+    "block": "Alaknanda corridor (demonstration)",
+    "district": "Chamoli",
+    "state": "Uttarakhand",
+    "provenance": "SYNTHETIC_CALIBRATED"
+  },
+  {
+    "id": "H-04",
+    "name": "Bansera Tok",
+    "centroid": {
+      "lon": 79.424583,
+      "lat": 30.422917
+    },
+    "footprint": null,
+    "population": 163,
+    "households": 33,
+    "demographics": {
+      "elderly_60_plus": 22,
+      "children_under_5": 12,
+      "persons_with_disability": 5,
+      "medically_dependent": 3,
+      "low_income_households": 16
+    },
+    "structure_mix": {
+      "KUTCHA": 0.182819,
+      "SEMI_PUCCA": 0.348776,
+      "PUCCA": 0.468405
+    },
+    "critical_facilities": [
+      {
+        "id": "H-04-F1",
+        "kind": "ANGANWADI",
+        "name": "Anganwadi centre",
+        "location": {
+          "lon": 79.423346,
+          "lat": 30.424207
+        }
+      }
+    ],
+    "livelihood_centre": {
+      "lon": 79.312639,
+      "lat": 30.420694
+    },
+    "elevation_m": 1273.0,
+    "block": "Alaknanda corridor (demonstration)",
+    "district": "Chamoli",
+    "state": "Uttarakhand",
+    "provenance": "SYNTHETIC_CALIBRATED"
+  },
+  {
+    "id": "H-05",
+    "name": "Kandara Gaon",
+    "centroid": {
+      "lon": 79.315139,
+      "lat": 30.399028
+    },
+    "footprint": null,
+    "population": 343,
+    "households": 69,
+    "demographics": {
+      "elderly_60_plus": 40,
+      "children_under_5": 34,
+      "persons_with_disability": 8,
+      "medically_dependent": 8,
+      "low_income_households": 23
+    },
+    "structure_mix": {
+      "KUTCHA": 0.189518,
+      "SEMI_PUCCA": 0.351353,
+      "PUCCA": 0.459129
+    },
+    "critical_facilities": [
+      {
+        "id": "H-05-F1",
+        "kind": "ANGANWADI",
+        "name": "Anganwadi centre",
+        "location": {
+          "lon": 79.316338,
+          "lat": 30.397893
+        }
+      },
+      {
+        "id": "H-05-F2",
+        "kind": "SCHOOL",
+        "name": "Primary school",
+        "location": {
+          "lon": 79.312964,
+          "lat": 30.400156
+        }
+      }
+    ],
+    "livelihood_centre": {
+      "lon": 79.312639,
+      "lat": 30.420694
+    },
+    "elevation_m": 1306.0,
+    "block": "Alaknanda corridor (demonstration)",
+    "district": "Chamoli",
+    "state": "Uttarakhand",
+    "provenance": "SYNTHETIC_CALIBRATED"
+  },
+  {
+    "id": "H-06",
+    "name": "Simalkot",
+    "centroid": {
+      "lon": 79.625139,
+      "lat": 30.491806
+    },
+    "footprint": null,
+    "population": 140,
+    "households": 28,
+    "demographics": {
+      "elderly_60_plus": 16,
+      "children_under_5": 14,
+      "persons_with_disability": 5,
+      "medically_dependent": 3,
+      "low_income_households": 12
+    },
+    "structure_mix": {
+      "KUTCHA": 0.226285,
+      "SEMI_PUCCA": 0.365494,
+      "PUCCA": 0.408221
+    },
+    "critical_facilities": [],
+    "livelihood_centre": {
+      "lon": 79.312639,
+      "lat": 30.420694
+    },
+    "elevation_m": 1907.0,
+    "block": "Alaknanda corridor (demonstration)",
+    "district": "Chamoli",
+    "state": "Uttarakhand",
+    "provenance": "SYNTHETIC_CALIBRATED"
+  },
+  {
+    "id": "H-07",
+    "name": "Thalgaon Sera",
+    "centroid": {
+      "lon": 79.345417,
+      "lat": 30.414583
+    },
+    "footprint": null,
+    "population": 220,
+    "households": 44,
+    "demographics": {
+      "elderly_60_plus": 29,
+      "children_under_5": 19,
+      "persons_with_disability": 7,
+      "medically_dependent": 4,
+      "low_income_households": 16
+    },
+    "structure_mix": {
+      "KUTCHA": 0.202732,
+      "SEMI_PUCCA": 0.356435,
+      "PUCCA": 0.440833
+    },
+    "critical_facilities": [
+      {
+        "id": "H-07-F1",
+        "kind": "ANGANWADI",
+        "name": "Anganwadi centre",
+        "location": {
+          "lon": 79.34723,
+          "lat": 30.412615
+        }
+      }
+    ],
+    "livelihood_centre": {
+      "lon": 79.312639,
+      "lat": 30.420694
+    },
+    "elevation_m": 1522.0,
+    "block": "Alaknanda corridor (demonstration)",
+    "district": "Chamoli",
+    "state": "Uttarakhand",
+    "provenance": "SYNTHETIC_CALIBRATED"
+  },
+  {
+    "id": "H-08",
+    "name": "Dungri Tok",
+    "centroid": {
+      "lon": 79.317361,
+      "lat": 30.432361
+    },
+    "footprint": null,
+    "population": 152,
+    "households": 30,
+    "demographics": {
+      "elderly_60_plus": 25,
+      "children_under_5": 10,
+      "persons_with_disability": 5,
+      "medically_dependent": 2,
+      "low_income_households": 10
+    },
+    "structure_mix": {
+      "KUTCHA": 0.216027,
+      "SEMI_PUCCA": 0.361549,
+      "PUCCA": 0.422424
+    },
+    "critical_facilities": [
+      {
+        "id": "H-08-F1",
+        "kind": "ANGANWADI",
+        "name": "Anganwadi centre",
+        "location": {
+          "lon": 79.317995,
+          "lat": 30.430281
+        }
+      }
+    ],
+    "livelihood_centre": {
+      "lon": 79.312639,
+      "lat": 30.420694
+    },
+    "elevation_m": 1728.0,
+    "block": "Alaknanda corridor (demonstration)",
+    "district": "Chamoli",
+    "state": "Uttarakhand",
+    "provenance": "SYNTHETIC_CALIBRATED"
+  },
+  {
+    "id": "H-09",
+    "name": "Kharsoli Gaon",
+    "centroid": {
+      "lon": 79.347083,
+      "lat": 30.429306
+    },
+    "footprint": null,
+    "population": 168,
+    "households": 34,
+    "demographics": {
+      "elderly_60_plus": 18,
+      "children_under_5": 16,
+      "persons_with_disability": 4,
+      "medically_dependent": 4,
+      "low_income_households": 10
+    },
+    "structure_mix": {
+      "KUTCHA": 0.231475,
+      "SEMI_PUCCA": 0.36749,
+      "PUCCA": 0.401035
+    },
+    "critical_facilities": [
+      {
+        "id": "H-09-F1",
+        "kind": "ANGANWADI",
+        "name": "Anganwadi centre",
+        "location": {
+          "lon": 79.344611,
+          "lat": 30.43137
+        }
+      }
+    ],
+    "livelihood_centre": {
+      "lon": 79.312639,
+      "lat": 30.420694
+    },
+    "elevation_m": 1632.0,
+    "block": "Alaknanda corridor (demonstration)",
+    "district": "Chamoli",
+    "state": "Uttarakhand",
+    "provenance": "SYNTHETIC_CALIBRATED"
+  },
+  {
+    "id": "H-10",
+    "name": "Bhairaunkhal",
+    "centroid": {
+      "lon": 79.314028,
+      "lat": 30.347917
+    },
+    "footprint": null,
+    "population": 140,
+    "households": 28,
+    "demographics": {
+      "elderly_60_plus": 21,
+      "children_under_5": 12,
+      "persons_with_disability": 4,
+      "medically_dependent": 2,
+      "low_income_households": 12
+    },
+    "structure_mix": {
+      "KUTCHA": 0.172307,
+      "SEMI_PUCCA": 0.344733,
+      "PUCCA": 0.48296
+    },
+    "critical_facilities": [],
+    "livelihood_centre": {
+      "lon": 79.312639,
+      "lat": 30.420694
+    },
+    "elevation_m": 985.0,
+    "block": "Alaknanda corridor (demonstration)",
+    "district": "Chamoli",
+    "state": "Uttarakhand",
+    "provenance": "SYNTHETIC_CALIBRATED"
+  },
+  {
+    "id": "H-11",
+    "name": "Panduri Sera",
+    "centroid": {
+      "lon": 79.561806,
+      "lat": 30.554583
+    },
+    "footprint": null,
+    "population": 258,
+    "households": 52,
+    "demographics": {
+      "elderly_60_plus": 30,
+      "children_under_5": 25,
+      "persons_with_disability": 6,
+      "medically_dependent": 5,
+      "low_income_households": 21
+    },
+    "structure_mix": {
+      "KUTCHA": 0.240427,
+      "SEMI_PUCCA": 0.370933,
+      "PUCCA": 0.38864
+    },
+    "critical_facilities": [
+      {
+        "id": "H-11-F1",
+        "kind": "ANGANWADI",
+        "name": "Anganwadi centre",
+        "location": {
+          "lon": 79.563209,
+          "lat": 30.552551
+        }
+      }
+    ],
+    "livelihood_centre": {
+      "lon": 79.312639,
+      "lat": 30.420694
+    },
+    "elevation_m": 1954.0,
+    "block": "Alaknanda corridor (demonstration)",
+    "district": "Chamoli",
+    "state": "Uttarakhand",
+    "provenance": "SYNTHETIC_CALIBRATED"
+  },
+  {
+    "id": "H-12",
+    "name": "Sarauli Tok",
+    "centroid": {
+      "lon": 79.328194,
+      "lat": 30.369583
+    },
+    "footprint": null,
+    "population": 140,
+    "households": 28,
+    "demographics": {
+      "elderly_60_plus": 19,
+      "children_under_5": 10,
+      "persons_with_disability": 4,
+      "medically_dependent": 3,
+      "low_income_households": 12
+    },
+    "structure_mix": {
+      "KUTCHA": 0.208482,
+      "SEMI_PUCCA": 0.358647,
+      "PUCCA": 0.432871
+    },
+    "critical_facilities": [],
+    "livelihood_centre": {
+      "lon": 79.312639,
+      "lat": 30.420694
+    },
+    "elevation_m": 1616.0,
+    "block": "Alaknanda corridor (demonstration)",
+    "district": "Chamoli",
+    "state": "Uttarakhand",
+    "provenance": "SYNTHETIC_CALIBRATED"
+  }
+]

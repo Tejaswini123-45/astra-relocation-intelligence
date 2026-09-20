@@ -1,0 +1,11 @@
+.git
+.venv
+node_modules
+**/node_modules
+apps/web/.next
+data/astra.sqlite
+data/raw
+**/__pycache__
+.pytest_cache
+.ruff_cache
+.env

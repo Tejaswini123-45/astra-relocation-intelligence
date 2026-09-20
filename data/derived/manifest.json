@@ -1,0 +1,478 @@
+{
+  "study_area": "chamoli-alaknanda",
+  "bbox": [
+    79.3,
+    30.3,
+    79.75,
+    30.65
+  ],
+  "source_dem": "copernicus_dem_30m_alaknanda.tif",
+  "grid": {
+    "rows": 1260,
+    "cols": 1620,
+    "cell_x_m": 26.65,
+    "cell_y_m": 30.715,
+    "cell_area_m2": 818.57
+  },
+  "channel_threshold_km2": 0.5,
+  "methods": {
+    "slope": "Horn (1981) third-order finite difference",
+    "ruggedness": "Riley, DeGloria and Elliot (1999) terrain ruggedness index",
+    "depression_filling": "Priority-Flood (Barnes, Lehman and Mulla, 2014)",
+    "flow_routing": "D8 steepest descent (O'Callaghan and Mark, 1984)",
+    "hand": "Renno et al. (2008), Nobre et al. (2011)"
+  },
+  "layers": {
+    "slope_deg": {
+      "file": "slope_deg.tif",
+      "dtype": "uint8",
+      "stored_scale": 2.0,
+      "unit": "degrees",
+      "bytes": 1417013,
+      "min": 0.0,
+      "max": 78.68420292506948,
+      "mean": 33.29517899668345,
+      "note": "stored at 0.5 degree precision"
+    },
+    "ruggedness": {
+      "file": "ruggedness.tif",
+      "dtype": "uint16",
+      "stored_scale": 10.0,
+      "unit": "m",
+      "bytes": 2310427,
+      "min": 0.0,
+      "max": 123.9248764372997,
+      "mean": 18.146941173767356,
+      "note": "RMS elevation difference to neighbours"
+    },
+    "upstream_area_km2": {
+      "file": "upstream_area_km2.tif",
+      "dtype": "uint16",
+      "stored_scale": 10.0,
+      "unit": "km2",
+      "bytes": 253874,
+      "min": 0.0008185650004722772,
+      "max": 1383.1202770830016,
+      "mean": 0.9769404314255432,
+      "note": "contributing area draining through each cell"
+    },
+    "drainage": {
+      "file": "drainage.tif",
+      "dtype": "uint8",
+      "stored_scale": 1.0,
+      "unit": "boolean",
+      "bytes": 57423,
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.02120713305898491,
+      "note": "cells with at least 0.5 km2 upstream area"
+    },
+    "hand_m": {
+      "file": "hand_m.tif",
+      "dtype": "uint16",
+      "stored_scale": 10.0,
+      "unit": "m",
+      "bytes": 2031327,
+      "min": 0.0,
+      "max": 2083.0,
+      "mean": 310.8681814618852,
+      "note": "Renno/Nobre HAND"
+    },
+    "drainage_distance_m": {
+      "file": "drainage_distance_m.tif",
+      "dtype": "uint16",
+      "stored_scale": 1.0,
+      "unit": "m",
+      "bytes": 657556,
+      "min": 0.0,
+      "max": 1676.5127735122574,
+      "mean": 395.1276438276099,
+      "note": "Euclidean distance to the nearest channel cell"
+    },
+    "drainage_density": {
+      "file": "drainage_density.tif",
+      "dtype": "uint16",
+      "stored_scale": 10.0,
+      "unit": "km/km2",
+      "bytes": 301381,
+      "min": 0.0,
+      "max": 14.827983899179966,
+      "mean": 0.7473103233063151,
+      "note": "channel length per unit area over a 1 km moving window"
+    },
+    "confluence_density": {
+      "file": "confluence_density.tif",
+      "dtype": "uint16",
+      "stored_scale": 10.0,
+      "unit": "confluences/km2",
+      "bytes": 49166,
+      "min": 0.0,
+      "max": 23.367000238411446,
+      "mean": 0.518886354663804,
+      "note": "channel junctions per unit area over a 1.5 km moving window"
+    },
+    "catchment_slope_deg": {
+      "file": "catchment_slope_deg.tif",
+      "dtype": "uint8",
+      "stored_scale": 2.0,
+      "unit": "degrees",
+      "bytes": 1429797,
+      "min": 0.0,
+      "max": 76.97183696556652,
+      "mean": 33.15864692477222,
+      "note": "mean slope of the area draining through each cell"
+    },
+    "hillshade": {
+      "file": "hillshade.tif",
+      "dtype": "uint8",
+      "stored_scale": 1.0,
+      "unit": "0-255",
+      "bytes": 1631403,
+      "min": 0.0,
+      "max": 254.99610984931311,
+      "mean": 147.84194604752793,
+      "note": "azimuth 315, altitude 45"
+    },
+    "landcover_buildable": {
+      "file": "landcover_buildable.tif",
+      "dtype": "uint8",
+      "stored_scale": 1.0,
+      "unit": "boolean",
+      "bytes": 1034749,
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.49687301587301586,
+      "note": "ESA WorldCover classes [30, 40, 50, 60, 100] treated as buildable; [10, 70, 80, 90, 95] excluded"
+    },
+    "landcover_instability": {
+      "file": "landcover_instability.tif",
+      "dtype": "uint8",
+      "stored_scale": 100.0,
+      "unit": "index 0-1",
+      "bytes": 1660420,
+      "min": 0.1,
+      "max": 0.95,
+      "mean": 0.3775639991181658,
+      "note": "vegetation stability proxy per land cover class"
+    },
+    "landcover_infiltration": {
+      "file": "landcover_infiltration.tif",
+      "dtype": "uint8",
+      "stored_scale": 100.0,
+      "unit": "index 0-1",
+      "bytes": 1646196,
+      "min": 0.05,
+      "max": 0.85,
+      "mean": 0.6344376102292767,
+      "note": "infiltration capacity per land cover class, used inverted by the flood model"
+    },
+    "road_distance_m": {
+      "file": "road_distance_m.tif",
+      "dtype": "uint16",
+      "stored_scale": 1.0,
+      "unit": "m",
+      "bytes": 521311,
+      "min": 0.0,
+      "max": 18141.231733625646,
+      "mean": 4237.500558101829,
+      "note": "distance to the nearest of 392 OSM road ways"
+    },
+    "waterway_distance_m": {
+      "file": "waterway_distance_m.tif",
+      "dtype": "uint16",
+      "stored_scale": 1.0,
+      "unit": "m",
+      "bytes": 657128,
+      "min": 0.0,
+      "max": 4129.151208939104,
+      "mean": 734.882525244396,
+      "note": "distance to the nearest of 225 OSM waterway ways"
+    },
+    "terrain_preview": {
+      "file": "terrain_preview.jpg",
+      "dtype": "uint8 RGB, JPEG",
+      "stored_scale": 1.0,
+      "unit": "image",
+      "bytes": 486984,
+      "min": 826.0,
+      "max": 6284.0,
+      "mean": 3063.0035043111893,
+      "note": "Hillshade shaded by elevation, downsampled for the study-area preview. Georeferenced by the study bounding box."
+    },
+    "hazard_landslide": {
+      "file": "hazard_landslide.tif",
+      "dtype": "uint16",
+      "stored_scale": 10.0,
+      "unit": "index 0-100",
+      "bytes": 233317,
+      "min": 7.585548240270583,
+      "max": 79.15381266690763,
+      "mean": 37.40153955602593,
+      "note": "weighted overlay of 6 normalised factors (drainage_density 0.07, incident_density 0.21, landcover 0.10, rainfall_intensity 0.19, ruggedness 0.13, slope 0.30)"
+    },
+    "hazard_flood": {
+      "file": "hazard_flood.tif",
+      "dtype": "uint16",
+      "stored_scale": 10.0,
+      "unit": "index 0-100",
+      "bytes": 204246,
+      "min": 6.271737467746077,
+      "max": 88.49980443058637,
+      "mean": 27.10823424749144,
+      "note": "weighted overlay of 4 normalised factors (drainage_distance 0.26, hand 0.42, infiltration 0.12, rainfall_intensity 0.20)"
+    },
+    "hazard_cloudburst": {
+      "file": "hazard_cloudburst.tif",
+      "dtype": "uint16",
+      "stored_scale": 10.0,
+      "unit": "index 0-100",
+      "bytes": 218022,
+      "min": 2.4068507358462448,
+      "max": 80.6401394364448,
+      "mean": 30.574830833578194,
+      "note": "weighted overlay of 4 normalised factors (catchment_steepness 0.26, confluence_density 0.20, extreme_rainfall_frequency 0.30, upstream_area 0.24)"
+    },
+    "hazard_composite": {
+      "file": "hazard_composite.tif",
+      "dtype": "uint16",
+      "stored_scale": 10.0,
+      "unit": "index 0-100",
+      "bytes": 238797,
+      "min": 10.100065678011578,
+      "max": 100.0,
+      "mean": 50.72946575204555,
+      "note": "max_h(HSI_h) + 0.25 x second_highest_h(HSI_h), clipped to 100"
+    },
+    "confidence": {
+      "file": "confidence.tif",
+      "dtype": "uint16",
+      "stored_scale": 1000.0,
+      "unit": "index 0-1",
+      "bytes": 17651,
+      "min": 0.6225,
+      "max": 0.8384514227197923,
+      "mean": 0.6733880320870271,
+      "note": "evidence confidence, computed separately and never multiplied into the score"
+    },
+    "hazard_composite_overlay": {
+      "file": "hazard_composite.png",
+      "dtype": "uint8 RGBA",
+      "stored_scale": 1.0,
+      "unit": "image",
+      "bytes": 484154,
+      "min": 10.100065678011578,
+      "max": 100.0,
+      "mean": 50.72946575204555,
+      "note": "colour-mapped composite for the map overlay, aligned to the study bbox"
+    },
+    "red_zones": {
+      "file": "red_zones.geojson",
+      "dtype": "GeoJSON polygons",
+      "stored_scale": 1.0,
+      "unit": "polygons",
+      "bytes": 1019568,
+      "min": 0.0,
+      "max": 335.0,
+      "mean": 335.0,
+      "note": "thresholded composite, cleaned to the minimum mapping unit, grown by the configured buffer, exclusive between classes"
+    },
+    "landcover_ml_buildable": {
+      "file": "landcover_ml_buildable.tif",
+      "dtype": "uint8",
+      "stored_scale": 1.0,
+      "unit": "boolean",
+      "bytes": 265723,
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.4721521653929061,
+      "note": "Random Forest over Sentinel-2 spectral indices: a second opinion on buildable ground. ESA WorldCover remains the primary path."
+    },
+    "confidence_overlay": {
+      "file": "confidence.png",
+      "dtype": "uint8 RGBA",
+      "stored_scale": 1.0,
+      "unit": "image",
+      "bytes": 15161,
+      "min": 0.6225,
+      "max": 0.8384514227197923,
+      "mean": 0.6733880320870271,
+      "note": "evidence confidence rendered as a diagonal hatch whose density rises as confidence falls; drawn over the hazard surface rather than blended into it, because confidence is never multiplied into the score"
+    }
+  },
+  "hazard": {
+    "grid_rows": 387,
+    "grid_cols": 432,
+    "cell_x_m": 99.94,
+    "cell_y_m": 100.0,
+    "hazards_modelled": [
+      "LANDSLIDE",
+      "FLOOD",
+      "CLOUDBURST"
+    ],
+    "incidents_used": 209,
+    "rainfall_points": 16,
+    "zone_summary": {
+      "LOW": {
+        "count": 0,
+        "area_km2": 0,
+        "population_intersected": 0
+      },
+      "WATCH": {
+        "count": 155,
+        "area_km2": 600.361,
+        "population_intersected": 550
+      },
+      "ELEVATED": {
+        "count": 154,
+        "area_km2": 370.357,
+        "population_intersected": 1381
+      },
+      "CRITICAL": {
+        "count": 26,
+        "area_km2": 109.628,
+        "population_intersected": 308
+      }
+    },
+    "model_config_version": "1.10.0",
+    "engine_version": "0.6.0"
+  },
+  "landcover_refinement": {
+    "model": "landcover-refinement-rf",
+    "model_version": "2.0.0",
+    "algorithm": "RandomForestClassifier, 250 trees, max depth 10, balanced class weights, CPU only, trained in about a second",
+    "features": [
+      "ndvi",
+      "ndbi",
+      "ndwi",
+      "brightness"
+    ],
+    "feature_importance": {
+      "ndvi": 0.2204,
+      "ndbi": 0.2589,
+      "ndwi": 0.281,
+      "brightness": 0.2398
+    },
+    "classes": [
+      "built",
+      "cropland",
+      "grass",
+      "gravel",
+      "snow",
+      "vegetation",
+      "water"
+    ],
+    "buildable_classes": [
+      "built",
+      "cropland",
+      "grass",
+      "gravel"
+    ],
+    "training_samples": 3881,
+    "samples_per_class": {
+      "water": 520,
+      "gravel": 361,
+      "snow": 600,
+      "grass": 600,
+      "vegetation": 600,
+      "built": 600,
+      "cropland": 600
+    },
+    "class_signatures": {
+      "water": {
+        "available_cells": 520,
+        "median_ndvi": 0.0327,
+        "median_ndbi": 0.0431,
+        "median_ndwi": -0.0283,
+        "median_brightness": 0.264
+      },
+      "gravel": {
+        "available_cells": 361,
+        "median_ndvi": 0.0787,
+        "median_ndbi": 0.0052,
+        "median_ndwi": -0.1029,
+        "median_brightness": 0.2896
+      },
+      "snow": {
+        "available_cells": 151690,
+        "median_ndvi": -0.0215,
+        "median_ndbi": -0.6404,
+        "median_ndwi": 0.0222,
+        "median_brightness": 0.9046
+      },
+      "grass": {
+        "available_cells": 45498,
+        "median_ndvi": 0.3869,
+        "median_ndbi": -0.0818,
+        "median_ndwi": -0.4907,
+        "median_brightness": 0.165
+      },
+      "vegetation": {
+        "available_cells": 313356,
+        "median_ndvi": 0.741,
+        "median_ndbi": -0.1387,
+        "median_ndwi": -0.6875,
+        "median_brightness": 0.0679
+      },
+      "built": {
+        "available_cells": 2790,
+        "median_ndvi": 0.4189,
+        "median_ndbi": -0.009,
+        "median_ndwi": -0.4691,
+        "median_brightness": 0.178
+      },
+      "cropland": {
+        "available_cells": 12980,
+        "median_ndvi": 0.3981,
+        "median_ndbi": 0.0306,
+        "median_ndwi": -0.4671,
+        "median_brightness": 0.175
+      }
+    },
+    "labelling_rules": [
+      {
+        "label": "water",
+        "buildable": false,
+        "reasoning": "Cells on the DEM-derived channel network carrying more than 250 km2 of upstream area on near-flat ground: the Alaknanda and its major tributaries, which are permanently wet."
+      },
+      {
+        "label": "gravel",
+        "buildable": true,
+        "reasoning": "Flat ground beside smaller channels, 120 to 250 km2 of upstream area: riverbed gravel and braided bar, bare by definition."
+      },
+      {
+        "label": "snow",
+        "buildable": false,
+        "reasoning": "Steep ground above 4400 m. In a post-monsoon composite this is snow and ice, and its shortwave signature confirms it."
+      },
+      {
+        "label": "grass",
+        "buildable": true,
+        "reasoning": "Gentle ground between 3200 and 3800 m: above the treeline, below permanent snow, the alpine grazing belt."
+      },
+      {
+        "label": "vegetation",
+        "buildable": false,
+        "reasoning": "Steep slopes between 1900 and 2900 m more than 1.2 km from any mapped road: the closed-canopy forest belt, too far from access to be cleared."
+      },
+      {
+        "label": "built",
+        "buildable": true,
+        "reasoning": "Gentle ground within 60 m of a mapped road where the WorldPop surface exceeds 300 people per square kilometre: settlement and roadside."
+      },
+      {
+        "label": "cropland",
+        "buildable": true,
+        "reasoning": "Gentle valley-floor ground between 1000 and 1900 m within 300 m of a road: the terraced cultivation belt."
+      }
+    ],
+    "class_accuracy": 0.5965,
+    "buildable_accuracy": 0.765,
+    "agreement_with_worldcover": 0.6774,
+    "caveats": [
+      "Labels come from rules over the DEM, the D8 hydrology, the road network and the WorldPop surface - never from the WorldCover product this model is compared against, which would only prove it can copy.",
+      "The rules are approximations. Some labelled cells will be wrong, and the accuracy figures are therefore about the rules as much as the model.",
+      "Grass, cropland and built-up are not reliably separable at 30 m. That does not affect the decision this model feeds: all three are buildable, and buildable-or-not is the only question it is asked.",
+      "The model refines usable area. It scores no hazard and ranks nothing."
+    ]
+  }
+}

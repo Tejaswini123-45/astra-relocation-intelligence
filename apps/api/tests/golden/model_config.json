@@ -1,0 +1,1513 @@
+{
+  "capacity": {
+    "access_persons_per_route_day": {
+      "citation": null,
+      "description": "People one usable approach route can deliver to a site, being the route throughput ceiling times the daily movement window. Access capacity is the number of approach routes times this figure - the ACCESS row on the capacity table, supplied by the route engine.",
+      "key": "capacity.access_persons_per_route_day",
+      "provenance": "DEMO_CONFIG",
+      "unit": "persons per route",
+      "value": 3200.0
+    },
+    "covered_area_m2_per_person": {
+      "citation": "Sphere Association (2018), The Sphere Handbook: Humanitarian Charter and Minimum Standards in Humanitarian Response, 4th edition.",
+      "description": "Minimum covered living area per person.",
+      "key": "capacity.covered_area_m2_per_person",
+      "provenance": "REAL_OPEN",
+      "unit": "m2/person",
+      "value": 3.5
+    },
+    "gate_flood_return_period_years": {
+      "citation": null,
+      "description": "Return-period flood level a candidate site must sit above.",
+      "key": "gate.flood_return_period_years",
+      "provenance": "DEMO_CONFIG",
+      "unit": "years",
+      "value": 100.0
+    },
+    "gate_hazard_buffer_m": {
+      "citation": null,
+      "description": "Safety buffer around Critical and Elevated zones a site must sit outside of.",
+      "key": "gate.hazard_buffer_m",
+      "provenance": "DEMO_CONFIG",
+      "unit": "m",
+      "value": 250.0
+    },
+    "gate_max_road_distance_m": {
+      "citation": null,
+      "description": "Distance to the nearest usable road beyond which a site is not accessible.",
+      "key": "gate.max_road_distance_m",
+      "provenance": "DEMO_CONFIG",
+      "unit": "m",
+      "value": 1000.0
+    },
+    "gate_max_slope_deg": {
+      "citation": null,
+      "description": "Slope above which a candidate site fails the build-safe gate.",
+      "key": "gate.max_slope_deg",
+      "provenance": "DEMO_CONFIG",
+      "unit": "degrees",
+      "value": 18.0
+    },
+    "gate_min_hand_m": {
+      "citation": null,
+      "description": "Height above nearest drainage a candidate site must stand at to pass the flood gate. ASTRA does not run a hydraulic model, so HAND is used as the return-period stand-in and is labelled as one: it says how far above its channel a site sits, not what a 100-year discharge would do.",
+      "key": "gate.min_hand_m",
+      "provenance": "DEMO_CONFIG",
+      "unit": "m",
+      "value": 20.0
+    },
+    "intervention_healthcare_units": {
+      "citation": null,
+      "description": "Health facility capacity added by one intervention: a sub-centre serving a quarter of the population one full facility unit covers.",
+      "key": "intervention.healthcare_units",
+      "provenance": "DEMO_CONFIG",
+      "unit": "facility units",
+      "value": 0.25
+    },
+    "intervention_land_m2": {
+      "citation": null,
+      "description": "Usable land added by one land intervention: one hectare of terracing or acquisition adjacent to the site.",
+      "key": "intervention.land_m2",
+      "provenance": "DEMO_CONFIG",
+      "unit": "m2",
+      "value": 10000.0
+    },
+    "intervention_power_kva": {
+      "citation": null,
+      "description": "Connected load added by one power intervention: a distribution transformer.",
+      "key": "intervention.power_kva",
+      "provenance": "DEMO_CONFIG",
+      "unit": "kVA",
+      "value": 150.0
+    },
+    "intervention_sanitation_units": {
+      "citation": null,
+      "description": "Latrine units added by one sanitation intervention block.",
+      "key": "intervention.sanitation_units",
+      "provenance": "DEMO_CONFIG",
+      "unit": "latrines",
+      "value": 20.0
+    },
+    "intervention_shelter_units": {
+      "citation": null,
+      "description": "Shelter units added by one construction intervention.",
+      "key": "intervention.shelter_units",
+      "provenance": "DEMO_CONFIG",
+      "unit": "units",
+      "value": 40.0
+    },
+    "intervention_water_litres_day": {
+      "citation": null,
+      "description": "Water supply added by one intervention unit: a borewell with storage, sized at roughly one thousand people at the Sphere minimum.",
+      "key": "intervention.water_litres_per_day",
+      "provenance": "DEMO_CONFIG",
+      "unit": "L/day",
+      "value": 15000.0
+    },
+    "landcover_agreement_high_confidence": {
+      "citation": null,
+      "description": "Agreement between the WorldCover reclassification and the Random Forest refinement above which usable-area confidence is reported as High.",
+      "key": "capacity.landcover_agreement_high",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.85
+    },
+    "persons_per_health_facility": {
+      "citation": "Sphere Association (2018), The Sphere Handbook: Humanitarian Charter and Minimum Standards in Humanitarian Response, 4th edition.",
+      "description": "Population served by one health facility unit at minimum standard.",
+      "key": "capacity.persons_per_health_facility",
+      "provenance": "REAL_OPEN",
+      "unit": "persons/facility",
+      "value": 10000.0
+    },
+    "persons_per_household": {
+      "citation": null,
+      "description": "Household size used to convert person counts to household counts.",
+      "key": "capacity.persons_per_household",
+      "provenance": "DEMO_CONFIG",
+      "unit": "persons/household",
+      "value": 5.0
+    },
+    "persons_per_latrine": {
+      "citation": "Sphere Association (2018), The Sphere Handbook: Humanitarian Charter and Minimum Standards in Humanitarian Response, 4th edition.",
+      "description": "Maximum number of persons sharing one latrine.",
+      "key": "capacity.persons_per_latrine",
+      "provenance": "REAL_OPEN",
+      "unit": "persons/latrine",
+      "value": 20.0
+    },
+    "pmay_g_plot_area_m2": {
+      "citation": "Ministry of Rural Development, Pradhan Mantri Awaas Yojana - Gramin (PMAY-G) Framework for Implementation, dwelling and plot sizing norms.",
+      "description": "Minimum dwelling unit area for permanent rural resettlement.",
+      "key": "capacity.pmay_g_plot_area_m2",
+      "provenance": "REAL_OPEN",
+      "unit": "m2/dwelling",
+      "value": 25.0
+    },
+    "power_kva_per_household": {
+      "citation": null,
+      "description": "Assumed connected load per household for the power capacity constraint.",
+      "key": "capacity.power_kva_per_household",
+      "provenance": "DEMO_CONFIG",
+      "unit": "kVA/household",
+      "value": 1.0
+    },
+    "shelter_occupancy_persons_per_unit": {
+      "citation": "NDMA, Guidelines on Minimum Standards of Relief (relief camp and shelter provisioning).",
+      "description": "Design occupancy of one shelter unit, matched to average rural household size.",
+      "key": "capacity.shelter_occupancy",
+      "provenance": "REAL_OPEN",
+      "unit": "persons/unit",
+      "value": 5.0
+    },
+    "site_area_m2_per_person": {
+      "citation": "Sphere Association (2018), The Sphere Handbook: Humanitarian Charter and Minimum Standards in Humanitarian Response, 4th edition.",
+      "description": "Minimum total site area per person including services and circulation.",
+      "key": "capacity.site_area_m2_per_person",
+      "provenance": "REAL_OPEN",
+      "unit": "m2/person",
+      "value": 45.0
+    },
+    "site_measure_radius_m": {
+      "citation": null,
+      "description": "Radius around a candidate site centre within which usable area is measured on the real land-cover, slope and drainage surfaces.",
+      "key": "capacity.site_measure_radius_m",
+      "provenance": "DEMO_CONFIG",
+      "unit": "m",
+      "value": 650.0
+    },
+    "water_litres_per_person_day": {
+      "citation": "Sphere Association (2018), The Sphere Handbook: Humanitarian Charter and Minimum Standards in Humanitarian Response, 4th edition.",
+      "description": "Minimum water supply per person per day.",
+      "key": "capacity.water_lpcd",
+      "provenance": "REAL_OPEN",
+      "unit": "L/person/day",
+      "value": 15.0
+    }
+  },
+  "confidence": {
+    "band_high_min": {
+      "citation": null,
+      "description": "Confidence at or above which the reported band is High.",
+      "key": "confidence.band.HIGH_min",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.7
+    },
+    "band_medium_min": {
+      "citation": null,
+      "description": "Confidence at or above which the reported band is Medium.",
+      "key": "confidence.band.MEDIUM_min",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.45
+    },
+    "w_data_completeness": {
+      "citation": null,
+      "description": "Share of confidence from how many required inputs were present.",
+      "key": "confidence.w_data_completeness",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.3
+    },
+    "w_evidence_recency": {
+      "citation": null,
+      "description": "Share from how recent the supporting evidence is.",
+      "key": "confidence.w_evidence_recency",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.25
+    },
+    "w_provenance_mix": {
+      "citation": null,
+      "description": "Share from the provenance mix of the inputs: real observed data raises confidence, synthetic and demo constants lower it.",
+      "key": "confidence.w_provenance_mix",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.3
+    },
+    "w_spatial_resolution": {
+      "citation": null,
+      "description": "Share from the spatial resolution of the coarsest contributing layer.",
+      "key": "confidence.w_spatial_resolution",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.15
+    }
+  },
+  "disclaimer": "Values marked DEMO_CONFIG are ASTRA's own analytical choices, not government rules or statutory thresholds. Values marked REAL_OPEN carry the published standard they are drawn from.",
+  "engine_version": "0.6.0",
+  "evidence": {
+    "incident_fatality_bonus": {
+      "citation": null,
+      "description": "Additional weight per recorded fatality, capped, so that events with a documented human toll count for more than an unattributed report.",
+      "key": "evidence.incident_fatality_bonus",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.05
+    },
+    "incident_fatality_bonus_cap": {
+      "citation": null,
+      "description": "Ceiling on the fatality contribution to a single event's weight.",
+      "key": "evidence.incident_fatality_bonus_cap",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 2.0
+    },
+    "incident_max_location_error_km": {
+      "citation": null,
+      "description": "Records whose stated location accuracy is coarser than this are excluded: at 100 m grid resolution they would smear evidence across whole valleys.",
+      "key": "evidence.incident_max_location_error_km",
+      "provenance": "DEMO_CONFIG",
+      "unit": "km",
+      "value": 25.0
+    },
+    "incident_weight_large": {
+      "citation": null,
+      "description": "Relative weight of a large event.",
+      "key": "evidence.incident_weight.large",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 2.0
+    },
+    "incident_weight_medium": {
+      "citation": null,
+      "description": "Relative weight of a medium event.",
+      "key": "evidence.incident_weight.medium",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 1.0
+    },
+    "incident_weight_small": {
+      "citation": null,
+      "description": "Relative weight of a small recorded event.",
+      "key": "evidence.incident_weight.small",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.5
+    },
+    "incident_weight_unknown": {
+      "citation": null,
+      "description": "Relative weight where the record does not state a size.",
+      "key": "evidence.incident_weight.unknown",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 1.0
+    },
+    "incident_weight_very_large": {
+      "citation": null,
+      "description": "Relative weight of a very large event.",
+      "key": "evidence.incident_weight.very_large",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 3.0
+    },
+    "rainfall_idw_power": {
+      "citation": null,
+      "description": "Inverse-distance weighting exponent used to interpolate the rainfall grid points across the corridor.",
+      "key": "evidence.rainfall_idw_power",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 2.0
+    }
+  },
+  "generation": {
+    "demographic_jitter": {
+      "citation": null,
+      "description": "Fractional spread applied to each assumed share across habitations, so the dataset is not twelve identical villages.",
+      "key": "generation.demographic_jitter",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.25
+    },
+    "habitation_count": {
+      "citation": null,
+      "description": "Number of synthetic habitations generated.",
+      "key": "generation.habitation_count",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 12.0
+    },
+    "kutcha_share_connected": {
+      "citation": null,
+      "description": "Assumed kutcha dwelling share for the best-connected habitations.",
+      "key": "generation.kutcha_share_connected",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.16
+    },
+    "kutcha_share_remote": {
+      "citation": null,
+      "description": "Assumed kutcha dwelling share for the least road-accessible habitations.",
+      "key": "generation.kutcha_share_remote",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.42
+    },
+    "min_separation_m": {
+      "citation": null,
+      "description": "Minimum spacing between generated settlements, so they read as distinct habitations rather than one cluster.",
+      "key": "generation.min_separation_m",
+      "provenance": "DEMO_CONFIG",
+      "unit": "m",
+      "value": 1500.0
+    },
+    "population_max": {
+      "citation": null,
+      "description": "Ceiling on generated habitation population.",
+      "key": "generation.population_max",
+      "provenance": "DEMO_CONFIG",
+      "unit": "persons",
+      "value": 1450.0
+    },
+    "population_min": {
+      "citation": null,
+      "description": "Floor on generated habitation population.",
+      "key": "generation.population_min",
+      "provenance": "DEMO_CONFIG",
+      "unit": "persons",
+      "value": 140.0
+    },
+    "seed": {
+      "citation": null,
+      "description": "Random seed for the synthetic dataset, so the demonstration scenario is identical on every machine and every run.",
+      "key": "generation.seed",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 26191.0
+    },
+    "settlement_catchment_km2": {
+      "citation": null,
+      "description": "Area over which the WorldPop population surface is integrated to size a settlement.",
+      "key": "generation.settlement_catchment_km2",
+      "provenance": "DEMO_CONFIG",
+      "unit": "km2",
+      "value": 0.65
+    },
+    "settlement_max_elevation_m": {
+      "citation": null,
+      "description": "Upper elevation bound for plausible year-round habitation in this corridor.",
+      "key": "generation.settlement_max_elevation_m",
+      "provenance": "DEMO_CONFIG",
+      "unit": "m",
+      "value": 2600.0
+    },
+    "settlement_max_road_distance_m": {
+      "citation": null,
+      "description": "Habitations are placed within this distance of a mapped road, matching the observed pattern of road-linked hill settlement.",
+      "key": "generation.settlement_max_road_distance_m",
+      "provenance": "DEMO_CONFIG",
+      "unit": "m",
+      "value": 900.0
+    },
+    "settlement_min_elevation_m": {
+      "citation": null,
+      "description": "Lower elevation bound for plausible year-round habitation in this corridor.",
+      "key": "generation.settlement_min_elevation_m",
+      "provenance": "DEMO_CONFIG",
+      "unit": "m",
+      "value": 900.0
+    },
+    "share_children_u5": {
+      "citation": null,
+      "description": "Assumed share of children under five.",
+      "key": "generation.share_children_u5",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.082
+    },
+    "share_disability": {
+      "citation": null,
+      "description": "Assumed share of persons with disabilities.",
+      "key": "generation.share_disability",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.028
+    },
+    "share_elderly": {
+      "citation": null,
+      "description": "Assumed share of residents aged 60 and above. Set above a national rural average to reflect working-age out-migration from hill districts.",
+      "key": "generation.share_elderly",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.135
+    },
+    "share_low_income_households": {
+      "citation": null,
+      "description": "Assumed share of households that are single-earner or low-income.",
+      "key": "generation.share_low_income_households",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.38
+    },
+    "share_medical_dependency": {
+      "citation": null,
+      "description": "Assumed share of residents dependent on regular medical support.",
+      "key": "generation.share_medical_dependency",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.021
+    },
+    "site_count": {
+      "citation": null,
+      "description": "Number of synthetic candidate relocation sites.",
+      "key": "generation.site_count",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 6.0
+    }
+  },
+  "hazard": {
+    "cloudburst_weights": {
+      "hazard": "CLOUDBURST",
+      "method_citation": "Geological Survey of India / BIS IS 14496 (Part 2): Preparation of landslide hazard zonation maps - weighted factor overlay methodology.",
+      "weights": {
+        "catchment_steepness": {
+          "citation": null,
+          "description": "Mean steepness of the contributing catchment.",
+          "key": "w.cloudburst.catchment_steepness",
+          "provenance": "DEMO_CONFIG",
+          "unit": null,
+          "value": 0.26
+        },
+        "confluence_density": {
+          "citation": null,
+          "description": "Density of drainage confluences, where flash flow concentrates.",
+          "key": "w.cloudburst.confluence_density",
+          "provenance": "DEMO_CONFIG",
+          "unit": null,
+          "value": 0.2
+        },
+        "extreme_rainfall_frequency": {
+          "citation": null,
+          "description": "Frequency of extreme short-duration rainfall events.",
+          "key": "w.cloudburst.extreme_rainfall_frequency",
+          "provenance": "DEMO_CONFIG",
+          "unit": null,
+          "value": 0.3
+        },
+        "upstream_area": {
+          "citation": null,
+          "description": "Upstream contributing area feeding the cell.",
+          "key": "w.cloudburst.upstream_area",
+          "provenance": "DEMO_CONFIG",
+          "unit": null,
+          "value": 0.24
+        }
+      }
+    },
+    "coastal_weights": {
+      "hazard": "COASTAL_EROSION",
+      "method_citation": "Geological Survey of India / BIS IS 14496 (Part 2): Preparation of landslide hazard zonation maps - weighted factor overlay methodology.",
+      "weights": {
+        "coastline_distance": {
+          "citation": null,
+          "description": "Distance to the coastline.",
+          "key": "w.coastal.coastline_distance",
+          "provenance": "DEMO_CONFIG",
+          "unit": null,
+          "value": 0.22
+        },
+        "elevation": {
+          "citation": null,
+          "description": "Elevation above mean sea level, inverted.",
+          "key": "w.coastal.elevation",
+          "provenance": "DEMO_CONFIG",
+          "unit": null,
+          "value": 0.25
+        },
+        "shoreline_retreat_rate": {
+          "citation": null,
+          "description": "Observed shoreline retreat rate.",
+          "key": "w.coastal.shoreline_retreat_rate",
+          "provenance": "DEMO_CONFIG",
+          "unit": null,
+          "value": 0.35
+        },
+        "surge_exposure": {
+          "citation": null,
+          "description": "Storm-surge exposure proxy.",
+          "key": "w.coastal.surge_exposure",
+          "provenance": "DEMO_CONFIG",
+          "unit": null,
+          "value": 0.18
+        }
+      }
+    },
+    "composite_lambda": {
+      "citation": null,
+      "description": "Weight on the second-highest hazard in the composite. Preserves dominance instead of averaging multi-hazard exposure away.",
+      "key": "hazard.composite_lambda",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.25
+    },
+    "flood_weights": {
+      "hazard": "FLOOD",
+      "method_citation": "Geological Survey of India / BIS IS 14496 (Part 2): Preparation of landslide hazard zonation maps - weighted factor overlay methodology.",
+      "weights": {
+        "drainage_distance": {
+          "citation": null,
+          "description": "Distance to the drainage network.",
+          "key": "w.flood.drainage_distance",
+          "provenance": "DEMO_CONFIG",
+          "unit": null,
+          "value": 0.26
+        },
+        "hand": {
+          "citation": null,
+          "description": "Height above nearest drainage, inverted.",
+          "key": "w.flood.hand",
+          "provenance": "DEMO_CONFIG",
+          "unit": null,
+          "value": 0.42
+        },
+        "infiltration": {
+          "citation": null,
+          "description": "Infiltration proxy derived from land cover.",
+          "key": "w.flood.infiltration",
+          "provenance": "DEMO_CONFIG",
+          "unit": null,
+          "value": 0.12
+        },
+        "rainfall_intensity": {
+          "citation": null,
+          "description": "Rainfall intensity and return period.",
+          "key": "w.flood.rainfall_intensity",
+          "provenance": "DEMO_CONFIG",
+          "unit": null,
+          "value": 0.2
+        }
+      }
+    },
+    "grid_resolution_m": {
+      "citation": null,
+      "description": "Cell size of the susceptibility grid over the study bounding box.",
+      "key": "hazard.grid_resolution_m",
+      "provenance": "DEMO_CONFIG",
+      "unit": "m",
+      "value": 100.0
+    },
+    "history_kernel_radius_m": {
+      "citation": null,
+      "description": "Bandwidth of the kernel density estimate over historical incident points.",
+      "key": "hazard.history_kernel_radius_m",
+      "provenance": "DEMO_CONFIG",
+      "unit": "m",
+      "value": 1500.0
+    },
+    "landslide_weights": {
+      "hazard": "LANDSLIDE",
+      "method_citation": "Geological Survey of India / BIS IS 14496 (Part 2): Preparation of landslide hazard zonation maps - weighted factor overlay methodology.",
+      "weights": {
+        "drainage_density": {
+          "citation": null,
+          "description": "Drainage density as a saturation and undercutting proxy.",
+          "key": "w.landslide.drainage_density",
+          "provenance": "DEMO_CONFIG",
+          "unit": null,
+          "value": 0.07
+        },
+        "incident_density": {
+          "citation": null,
+          "description": "Kernel density of historical landslide incidents.",
+          "key": "w.landslide.incident_density",
+          "provenance": "DEMO_CONFIG",
+          "unit": null,
+          "value": 0.21
+        },
+        "landcover": {
+          "citation": null,
+          "description": "Land-cover and vegetation stability proxy.",
+          "key": "w.landslide.landcover",
+          "provenance": "DEMO_CONFIG",
+          "unit": null,
+          "value": 0.1
+        },
+        "rainfall_intensity": {
+          "citation": null,
+          "description": "Antecedent rainfall and return-period intensity.",
+          "key": "w.landslide.rainfall_intensity",
+          "provenance": "DEMO_CONFIG",
+          "unit": null,
+          "value": 0.19
+        },
+        "ruggedness": {
+          "citation": null,
+          "description": "Terrain ruggedness index from the DEM.",
+          "key": "w.landslide.ruggedness",
+          "provenance": "DEMO_CONFIG",
+          "unit": null,
+          "value": 0.13
+        },
+        "slope": {
+          "citation": null,
+          "description": "Normalised slope angle.",
+          "key": "w.landslide.slope",
+          "provenance": "DEMO_CONFIG",
+          "unit": null,
+          "value": 0.3
+        }
+      }
+    },
+    "min_mapping_unit_ha": {
+      "citation": null,
+      "description": "Smallest area published as a zone. Clusters below this are removed during morphological cleaning: at 100 m resolution a single cell above a threshold is noise, and publishing it as a zone would present noise as a finding.",
+      "key": "hazard.min_mapping_unit_ha",
+      "provenance": "DEMO_CONFIG",
+      "unit": "ha",
+      "value": 25.0
+    },
+    "zone_buffer_m": {
+      "citation": null,
+      "description": "Outward buffer applied to cleaned zone polygons before exposure intersection.",
+      "key": "hazard.zone_buffer_m",
+      "provenance": "DEMO_CONFIG",
+      "unit": "m",
+      "value": 50.0
+    },
+    "zone_threshold_critical": {
+      "citation": null,
+      "description": "Composite score at or above which a cell is classified Critical. Set near the 95th percentile of the corridor's own composite distribution: a class that covered a third of the terrain would not direct anyone anywhere.",
+      "key": "hazard.zone_threshold.CRITICAL",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 78.0
+    },
+    "zone_threshold_elevated": {
+      "citation": null,
+      "description": "Composite score at or above which a cell is classified Elevated. Near the 82nd percentile of the corridor composite distribution.",
+      "key": "hazard.zone_threshold.ELEVATED",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 62.0
+    },
+    "zone_threshold_watch": {
+      "citation": null,
+      "description": "Composite score at or above which a cell is classified Watch. Near the 57th percentile of the corridor composite distribution.",
+      "key": "hazard.zone_threshold.WATCH",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 52.0
+    }
+  },
+  "normalisation": {
+    "catchment_slope_high_deg": {
+      "citation": null,
+      "description": "Mean catchment slope at full contribution.",
+      "key": "norm.catchment_slope_high_deg",
+      "provenance": "DEMO_CONFIG",
+      "unit": "degrees",
+      "value": 45.0
+    },
+    "catchment_slope_low_deg": {
+      "citation": null,
+      "description": "Mean catchment slope contributing nothing to flash-flood susceptibility.",
+      "key": "norm.catchment_slope_low_deg",
+      "provenance": "DEMO_CONFIG",
+      "unit": "degrees",
+      "value": 10.0
+    },
+    "coastal_elevation_high_m": {
+      "citation": null,
+      "description": "Elevation above which coastal erosion exposure is treated as negligible.",
+      "key": "norm.coastal_elevation_high_m",
+      "provenance": "DEMO_CONFIG",
+      "unit": "m",
+      "value": 15.0
+    },
+    "coastal_elevation_low_m": {
+      "citation": null,
+      "description": "Elevation at or below which coastal exposure is saturated.",
+      "key": "norm.coastal_elevation_low_m",
+      "provenance": "DEMO_CONFIG",
+      "unit": "m",
+      "value": 0.0
+    },
+    "coastal_retreat_high_m_yr": {
+      "citation": null,
+      "description": "Shoreline retreat at full contribution.",
+      "key": "norm.coastal_retreat_high_m_yr",
+      "provenance": "DEMO_CONFIG",
+      "unit": "m/year",
+      "value": 5.0
+    },
+    "coastal_retreat_low_m_yr": {
+      "citation": null,
+      "description": "Shoreline retreat contributing nothing.",
+      "key": "norm.coastal_retreat_low_m_yr",
+      "provenance": "DEMO_CONFIG",
+      "unit": "m/year",
+      "value": 0.0
+    },
+    "coastline_distance_high_m": {
+      "citation": null,
+      "description": "Distance to the coastline beyond which erosion exposure is negligible.",
+      "key": "norm.coastline_distance_high_m",
+      "provenance": "DEMO_CONFIG",
+      "unit": "m",
+      "value": 2000.0
+    },
+    "coastline_distance_low_m": {
+      "citation": null,
+      "description": "Distance to the coastline, saturated.",
+      "key": "norm.coastline_distance_low_m",
+      "provenance": "DEMO_CONFIG",
+      "unit": "m",
+      "value": 0.0
+    },
+    "density_percentile": {
+      "citation": null,
+      "description": "Percentile of a kernel-density surface used as its normalisation ceiling, so one exceptional cluster cannot flatten the rest of the map.",
+      "key": "norm.density_percentile",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 95.0
+    },
+    "drainage_density_high": {
+      "citation": null,
+      "description": "Drainage density at full contribution.",
+      "key": "norm.drainage_density_high",
+      "provenance": "DEMO_CONFIG",
+      "unit": "km/km2",
+      "value": 12.0
+    },
+    "drainage_density_low": {
+      "citation": null,
+      "description": "Drainage density contributing nothing.",
+      "key": "norm.drainage_density_low",
+      "provenance": "DEMO_CONFIG",
+      "unit": "km/km2",
+      "value": 0.0
+    },
+    "drainage_distance_high_m": {
+      "citation": null,
+      "description": "Distance to a channel beyond which proximity contributes nothing.",
+      "key": "norm.drainage_distance_high_m",
+      "provenance": "DEMO_CONFIG",
+      "unit": "m",
+      "value": 600.0
+    },
+    "drainage_distance_low_m": {
+      "citation": null,
+      "description": "Distance to a channel at or below which proximity is saturated.",
+      "key": "norm.drainage_distance_low_m",
+      "provenance": "DEMO_CONFIG",
+      "unit": "m",
+      "value": 25.0
+    },
+    "extreme_rain_days_high": {
+      "citation": null,
+      "description": "Heavy-rainfall days per year at which the frequency factor saturates.",
+      "key": "norm.extreme_rain_days_high",
+      "provenance": "DEMO_CONFIG",
+      "unit": "days/year",
+      "value": 3.0
+    },
+    "extreme_rain_days_low": {
+      "citation": null,
+      "description": "Heavy-rainfall days per year at or below which the cloudburst frequency factor is zero.",
+      "key": "norm.extreme_rain_days_low",
+      "provenance": "DEMO_CONFIG",
+      "unit": "days/year",
+      "value": 0.3
+    },
+    "extreme_rain_threshold_mm": {
+      "citation": null,
+      "description": "Daily rainfall counted as a heavy-rainfall day. Matches the IMD 'heavy rainfall' class boundary of 64.5 mm in 24 hours.",
+      "key": "norm.extreme_rain_threshold_mm",
+      "provenance": "DEMO_CONFIG",
+      "unit": "mm/day",
+      "value": 64.5
+    },
+    "hand_high_m": {
+      "citation": null,
+      "description": "Height above nearest drainage at or above which riverine flood exposure is treated as negligible.",
+      "key": "norm.hand_high_m",
+      "provenance": "DEMO_CONFIG",
+      "unit": "m",
+      "value": 45.0
+    },
+    "hand_low_m": {
+      "citation": null,
+      "description": "Height above nearest drainage at or below which flood exposure is saturated.",
+      "key": "norm.hand_low_m",
+      "provenance": "DEMO_CONFIG",
+      "unit": "m",
+      "value": 3.0
+    },
+    "rainfall_intensity_high_mm": {
+      "citation": null,
+      "description": "Annual maximum daily rainfall at or above which the intensity factor saturates.",
+      "key": "norm.rainfall_intensity_high_mm",
+      "provenance": "DEMO_CONFIG",
+      "unit": "mm/day",
+      "value": 120.0
+    },
+    "rainfall_intensity_low_mm": {
+      "citation": null,
+      "description": "Annual maximum daily rainfall at or below which the intensity factor is zero.",
+      "key": "norm.rainfall_intensity_low_mm",
+      "provenance": "DEMO_CONFIG",
+      "unit": "mm/day",
+      "value": 50.0
+    },
+    "ruggedness_high_m": {
+      "citation": null,
+      "description": "Terrain ruggedness at full contribution.",
+      "key": "norm.ruggedness_high_m",
+      "provenance": "DEMO_CONFIG",
+      "unit": "m",
+      "value": 45.0
+    },
+    "ruggedness_low_m": {
+      "citation": null,
+      "description": "Terrain ruggedness contributing nothing.",
+      "key": "norm.ruggedness_low_m",
+      "provenance": "DEMO_CONFIG",
+      "unit": "m",
+      "value": 2.0
+    },
+    "slope_high_deg": {
+      "citation": null,
+      "description": "Slope at or above which the slope factor is saturated. Above roughly this angle, loose material has already shed and failure behaviour changes.",
+      "key": "norm.slope_high_deg",
+      "provenance": "DEMO_CONFIG",
+      "unit": "degrees",
+      "value": 45.0
+    },
+    "slope_low_deg": {
+      "citation": null,
+      "description": "Slope at or below which slope contributes nothing to landslide susceptibility.",
+      "key": "norm.slope_low_deg",
+      "provenance": "DEMO_CONFIG",
+      "unit": "degrees",
+      "value": 10.0
+    },
+    "upstream_area_high_km2": {
+      "citation": null,
+      "description": "Upstream contributing area at which the concentration factor saturates.",
+      "key": "norm.upstream_area_high_km2",
+      "provenance": "DEMO_CONFIG",
+      "unit": "km2",
+      "value": 200.0
+    },
+    "upstream_area_low_km2": {
+      "citation": null,
+      "description": "Upstream contributing area at or below which flow concentration is negligible. Normalised logarithmically between the bounds, since discharge scales with area over orders of magnitude.",
+      "key": "norm.upstream_area_low_km2",
+      "provenance": "DEMO_CONFIG",
+      "unit": "km2",
+      "value": 0.5
+    }
+  },
+  "optimiser": {
+    "beta_fragmentation": {
+      "citation": null,
+      "description": "Penalty for splitting one habitation across multiple destination sites. It charges splits between places, not between phases: a village moved to one site over two phases is a phased relocation, not a divided community.",
+      "key": "opt.beta6_fragmentation",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 150.0
+    },
+    "beta_livelihood_disruption": {
+      "citation": null,
+      "description": "Penalty per unit of computed livelihood disruption.",
+      "key": "opt.beta5_livelihood_disruption",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 300.0
+    },
+    "beta_phase_delay": {
+      "citation": null,
+      "description": "Penalty per person per phase of delay, scaled by that habitation's priority. Without it, moving someone in the medium term and moving them now cost the same, and 'Immediate' would be a label on a ranking rather than a claim about when people leave. It is deliberately small: its job is to order the plan, not to change who is in it. At four times this value the solver began declining late moves altogether and placed a hundred fewer people, which is the wrong trade and is asserted against in the tests.",
+      "key": "opt.beta7_phase_delay",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 25.0
+    },
+    "beta_route_risk": {
+      "citation": null,
+      "description": "Penalty per unit of person-weighted route risk.",
+      "key": "opt.beta3_route_risk",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 250.0
+    },
+    "beta_site_overload": {
+      "citation": null,
+      "description": "Penalty per person placed above a site's soft capacity share. A site run to its ceiling has no margin for the household that arrives late or the service that underperforms, so the optimiser should prefer not to - but only prefer. This value is deliberately well below the per-person cost of leaving someone in a red zone, because a plan that strands people to protect a 15% margin is not a plan an SDMA can defend.",
+      "key": "opt.beta4_site_overload",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 60.0
+    },
+    "beta_travel_time": {
+      "citation": null,
+      "description": "Penalty per person-minute of travel.",
+      "key": "opt.beta2_travel_time",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 1.0
+    },
+    "beta_unmet_demand": {
+      "citation": null,
+      "description": "Penalty per unrelocated person, scaled by that habitation's priority.",
+      "key": "opt.beta1_unmet_demand",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 1000.0
+    },
+    "livelihood_commute_ceiling_min": {
+      "citation": null,
+      "description": "Routed travel time from a destination site back to the origin livelihood centre at which commute disruption is scored at maximum.",
+      "key": "livelihood.commute_ceiling_min",
+      "provenance": "DEMO_CONFIG",
+      "unit": "min",
+      "value": 90.0
+    },
+    "livelihood_market_ceiling_min": {
+      "citation": null,
+      "description": "Routed travel time from a site to the nearest trunk road at which market and service access is scored at maximum disruption. Trunk roads are the measurable proxy ASTRA has for where a district's markets, banks and offices are; it is not a survey of them.",
+      "key": "livelihood.market_ceiling_min",
+      "provenance": "DEMO_CONFIG",
+      "unit": "min",
+      "value": 60.0
+    },
+    "livelihood_w_connectivity": {
+      "citation": null,
+      "description": "Share from the connectivity class of the destination road link.",
+      "key": "livelihood.w_connectivity",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.2
+    },
+    "livelihood_w_market_access": {
+      "citation": null,
+      "description": "Share from market and service access at the destination.",
+      "key": "livelihood.w_market_access",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.2
+    },
+    "livelihood_w_road_reliability": {
+      "citation": null,
+      "description": "Share from year-round reliability of that link.",
+      "key": "livelihood.w_road_reliability",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.2
+    },
+    "livelihood_w_travel_time": {
+      "citation": null,
+      "description": "Share of livelihood disruption from travel time back to the origin livelihood centre. Livelihood disruption is computed, never a fixed km rule.",
+      "key": "livelihood.w_travel_time",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.4
+    },
+    "max_travel_minutes_immediate": {
+      "citation": null,
+      "description": "Travel-time ceiling for an Immediate-phase assignment.",
+      "key": "opt.max_travel_minutes.IMMEDIATE",
+      "provenance": "DEMO_CONFIG",
+      "unit": "min",
+      "value": 60.0
+    },
+    "max_travel_minutes_medium_term": {
+      "citation": null,
+      "description": "Travel-time ceiling for a Medium-term-phase assignment.",
+      "key": "opt.max_travel_minutes.MEDIUM_TERM",
+      "provenance": "DEMO_CONFIG",
+      "unit": "min",
+      "value": 180.0
+    },
+    "max_travel_minutes_short_term": {
+      "citation": null,
+      "description": "Travel-time ceiling for a Short-term-phase assignment.",
+      "key": "opt.max_travel_minutes.SHORT_TERM",
+      "provenance": "DEMO_CONFIG",
+      "unit": "min",
+      "value": 120.0
+    },
+    "min_assignment_block": {
+      "citation": null,
+      "description": "Household-integrity floor: no assignment smaller than this many people, to avoid absurd fragmentation of a settlement.",
+      "key": "opt.min_assignment_block",
+      "provenance": "DEMO_CONFIG",
+      "unit": "persons",
+      "value": 25.0
+    },
+    "phase_capacity_share_immediate": {
+      "citation": null,
+      "description": "Share of a site's effective capacity that can be occupied in the Immediate phase. Sites are not built out on day one: water, sanitation and shelter arrive over weeks, and the ramp says how much of the site is standing when the first movement happens.",
+      "key": "opt.phase_capacity_share.IMMEDIATE",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.45
+    },
+    "phase_capacity_share_medium_term": {
+      "citation": null,
+      "description": "Cumulative share by the end of the Medium-term phase: the whole assessed effective capacity.",
+      "key": "opt.phase_capacity_share.MEDIUM_TERM",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 1.0
+    },
+    "phase_capacity_share_short_term": {
+      "citation": null,
+      "description": "Cumulative share of a site's effective capacity occupied by the end of the Short-term phase.",
+      "key": "opt.phase_capacity_share.SHORT_TERM",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.75
+    },
+    "site_soft_capacity_share": {
+      "citation": null,
+      "description": "Share of a site's effective capacity beyond which each further person incurs the overload penalty. A site run to its ceiling has no margin for the household that arrives late or the service that underperforms, so the optimiser has to be given a reason to accept that - not forbidden from it.",
+      "key": "opt.site_soft_capacity_share",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.85
+    },
+    "solver_seed": {
+      "citation": null,
+      "description": "Fixed solver seed so every demo run is reproducible.",
+      "key": "opt.random_seed",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 20260191.0
+    },
+    "solver_time_limit_s": {
+      "citation": null,
+      "description": "CP-SAT wall-clock limit. On expiry the deterministic greedy fallback runs and the response is labelled FALLBACK.",
+      "key": "opt.time_limit_s",
+      "provenance": "DEMO_CONFIG",
+      "unit": "s",
+      "value": 10.0
+    }
+  },
+  "priority": {
+    "confidence_synthetic_penalty": {
+      "citation": null,
+      "description": "Provenance score assigned to a synthetic input when computing a habitation's evidence confidence. Demographic composition is assumed, so confidence in a habitation's priority is lower than confidence in the terrain beneath it.",
+      "key": "confidence.synthetic_input_penalty",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.45
+    },
+    "exposure_reference_facilities": {
+      "citation": null,
+      "description": "Number of critical facilities at which that component of exposure saturates.",
+      "key": "exposure.reference_facilities",
+      "provenance": "DEMO_CONFIG",
+      "unit": "facilities",
+      "value": 4.0
+    },
+    "exposure_reference_households": {
+      "citation": null,
+      "description": "Household count at which the household component of exposure saturates.",
+      "key": "exposure.reference_households",
+      "provenance": "DEMO_CONFIG",
+      "unit": "households",
+      "value": 300.0
+    },
+    "exposure_reference_population": {
+      "citation": null,
+      "description": "Population at which the population component of exposure saturates. A fixed reference rather than the largest settlement in the set, so a score does not change when a habitation is added or removed.",
+      "key": "exposure.reference_population",
+      "provenance": "DEMO_CONFIG",
+      "unit": "persons",
+      "value": 1500.0
+    },
+    "exposure_w_facilities": {
+      "citation": null,
+      "description": "Share of exposure driven by critical facilities (school, clinic, anganwadi).",
+      "key": "exposure.w_facilities",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.25
+    },
+    "exposure_w_households": {
+      "citation": null,
+      "description": "Share of exposure driven by household count.",
+      "key": "exposure.w_households",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.2
+    },
+    "exposure_w_population": {
+      "citation": null,
+      "description": "Share of exposure driven by resident population.",
+      "key": "exposure.w_population",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.55
+    },
+    "footprint_radius_m": {
+      "citation": null,
+      "description": "Radius over which composite hazard is summarised for a habitation. These settlements are compact; 300 m covers the built footprint and the slope immediately above it without reaching into the next valley.",
+      "key": "priority.footprint_radius_m",
+      "provenance": "DEMO_CONFIG",
+      "unit": "m",
+      "value": 300.0
+    },
+    "footprint_w_max": {
+      "citation": null,
+      "description": "Weight on the maximum composite within the footprint. The maximum is what can reach the settlement, so it counts - but taking the maximum alone would push every settlement in this terrain to 100 and destroy the ranking.",
+      "key": "priority.footprint_w_max",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.4
+    },
+    "footprint_w_mean": {
+      "citation": null,
+      "description": "Weight on the mean composite across the habitation footprint. The mean describes the ground the settlement actually sits on.",
+      "key": "priority.footprint_w_mean",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.6
+    },
+    "history_radius_m": {
+      "citation": null,
+      "description": "Radius around a habitation within which historical incidents are counted.",
+      "key": "history.radius_m",
+      "provenance": "DEMO_CONFIG",
+      "unit": "m",
+      "value": 3000.0
+    },
+    "history_reference_weighted_events": {
+      "citation": null,
+      "description": "Recency-weighted incident total at which the history factor saturates. Fixed so the factor means the same thing in every scenario. Set against the observed record for this corridor: reported inventories are sparse, and a reference set far above what the record can produce would make the one real evidence layer contribute nothing.",
+      "key": "history.reference_weighted_events",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 1.5
+    },
+    "history_tau_days": {
+      "citation": null,
+      "description": "Exponential decay constant for incident recency, ten years. A slope that failed a decade ago is still a slope that fails; a five-year memory would discard most of the published record for this corridor.",
+      "key": "history.tau_days",
+      "provenance": "DEMO_CONFIG",
+      "unit": "days",
+      "value": 3650.0
+    },
+    "override_critical_vulnerability": {
+      "citation": null,
+      "description": "Vulnerability index at or above which a habitation inside a Critical zone is escalated to Immediate regardless of its composite priority score.",
+      "key": "tier.override.critical_zone_vulnerability",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.55
+    },
+    "override_critical_zone_population": {
+      "citation": null,
+      "description": "Population inside a Critical zone at or above which a habitation is escalated to Immediate regardless of its composite priority score. A large settlement on Critical ground is an immediate question even when its averaged score is not the highest in the district.",
+      "key": "tier.override.critical_zone_population",
+      "provenance": "DEMO_CONFIG",
+      "unit": "persons",
+      "value": 400.0
+    },
+    "tier_immediate_min_priority": {
+      "citation": null,
+      "description": "Priority score at or above which a habitation is considered for Immediate. A policy choice about how much a district can act on at once, not a statutory trigger: set so the Immediate tier covers the settlements a district could plausibly move within one season.",
+      "key": "tier.immediate.min_priority",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 55.0
+    },
+    "tier_medium_term_min_priority": {
+      "citation": null,
+      "description": "Priority score at or above which a habitation enters Medium-term planning.",
+      "key": "tier.medium_term.min_priority",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 35.0
+    },
+    "tier_short_term_min_priority": {
+      "citation": null,
+      "description": "Priority score at or above which a habitation is considered for Short-term relocation, once bottlenecks identified by the capacity engine are relieved.",
+      "key": "tier.short_term.min_priority",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 45.0
+    },
+    "vuln_reference_children_u5": {
+      "citation": null,
+      "description": "Under-five share in the acutely vulnerable reference profile.",
+      "key": "vulnerability.reference.children_u5",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.15
+    },
+    "vuln_reference_disability": {
+      "citation": null,
+      "description": "Disability share in the acutely vulnerable reference profile.",
+      "key": "vulnerability.reference.disability",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.06
+    },
+    "vuln_reference_elderly": {
+      "citation": null,
+      "description": "Elderly share in the acutely vulnerable reference profile against which the vulnerability index is scaled.",
+      "key": "vulnerability.reference.elderly",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.25
+    },
+    "vuln_reference_kutcha": {
+      "citation": null,
+      "description": "Kutcha and semi-pucca dwelling share in the acutely vulnerable reference profile: every dwelling of weak construction.",
+      "key": "vulnerability.reference.kutcha_semi_pucca",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 1.0
+    },
+    "vuln_reference_low_income": {
+      "citation": null,
+      "description": "Low-income household share in the acutely vulnerable reference profile.",
+      "key": "vulnerability.reference.low_income",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.7
+    },
+    "vuln_reference_medical_dependency": {
+      "citation": null,
+      "description": "Medically dependent share in the acutely vulnerable reference profile.",
+      "key": "vulnerability.reference.medical_dependency",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.05
+    },
+    "vuln_w_children_u5": {
+      "citation": null,
+      "description": "Share of children under five.",
+      "key": "vulnerability.w_children_u5",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.18
+    },
+    "vuln_w_disability": {
+      "citation": null,
+      "description": "Share of persons with disabilities.",
+      "key": "vulnerability.w_disability",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.18
+    },
+    "vuln_w_elderly": {
+      "citation": null,
+      "description": "Share of residents aged 60 and above.",
+      "key": "vulnerability.w_elderly",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.2
+    },
+    "vuln_w_kutcha_share": {
+      "citation": null,
+      "description": "Structural typology proxy: kutcha and semi-pucca dwelling share.",
+      "key": "vulnerability.w_kutcha_share",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.15
+    },
+    "vuln_w_low_income": {
+      "citation": null,
+      "description": "Share of single-earner or low-income households.",
+      "key": "vulnerability.w_low_income",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.15
+    },
+    "vuln_w_medical_dependency": {
+      "citation": null,
+      "description": "Share of medically dependent residents.",
+      "key": "vulnerability.w_medical_dependency",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.14
+    },
+    "w_exposure": {
+      "citation": null,
+      "description": "Weight on population and critical-facility exposure.",
+      "key": "priority.w_exposure",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.25
+    },
+    "w_hazard": {
+      "citation": null,
+      "description": "Weight on composite hazard sampled over the habitation footprint.",
+      "key": "priority.w_hazard",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.35
+    },
+    "w_history": {
+      "citation": null,
+      "description": "Weight on recency-weighted incident history.",
+      "key": "priority.w_history",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.15
+    },
+    "w_vulnerability": {
+      "citation": null,
+      "description": "Weight on the demographic vulnerability index.",
+      "key": "priority.w_vulnerability",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.25
+    }
+  },
+  "route": {
+    "access_movement_window_hours": {
+      "citation": null,
+      "description": "Hours of usable movement in a relocation day - daylight on mountain roads, less the time convoys are not running. Throughput times this window is how many people the approach to a site can deliver, which is what makes ACCESS a capacity constraint rather than a yes/no.",
+      "key": "route.access_window_hours",
+      "provenance": "DEMO_CONFIG",
+      "unit": "h",
+      "value": 8.0
+    },
+    "hazard_segment_exposure_threshold": {
+      "citation": null,
+      "description": "Normalised composite hazard at or above which a road segment counts as hazard-exposed for the route's exposure tally and its longest continuous run.",
+      "key": "route.hazard_segment_threshold",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.6
+    },
+    "min_reliability_threshold": {
+      "citation": null,
+      "description": "Route reliability below which a site is treated as infeasible for a habitation in the optimiser, not merely penalised. A road ASTRA would not plan a relocation convoy down is not a slightly worse road. This threshold is a policy choice about acceptable risk, not a physical constant, and the weight sensitivity analysis is required to test what moves when it moves.",
+      "key": "route.min_reliability",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.6
+    },
+    "p_fail_bridge_dependency": {
+      "citation": null,
+      "description": "Additional failure probability for a segment carrying a bridge or culvert. Not scaled by length: a structure does not fail gradually. Kept low because the OpenStreetMap bridge tag does not distinguish a major span over the Alaknanda from a metre-wide culvert, and ASTRA does not have the structural inventory that would let it tell them apart.",
+      "key": "route.p_fail.bridge_dependency",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.01
+    },
+    "p_fail_hazard_coefficient": {
+      "citation": null,
+      "description": "Probability that one reference length of road at maximum modelled hazard susceptibility is impassable when relocation movement is required. This is a planning-horizon figure, not a per-journey one: it asks whether a road is usable across the weeks a phased relocation runs, allowing for normal clearance and restoration, which is why it is far below the chance of a road being blocked at some point during a monsoon.",
+      "key": "route.p_fail.hazard_coefficient",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.015
+    },
+    "p_fail_reference_length_m": {
+      "citation": null,
+      "description": "Length of fully hazard-exposed road over which the failure coefficient applies in full. Hazard-driven failure is treated as independent per unit of exposed length, so a stretch carrying twice this exposure carries the compounded chance of failing somewhere along it. This is what makes a route's reliability a property of the road rather than of how many junctions OSM happens to have mapped along it.",
+      "key": "route.p_fail.reference_length_m",
+      "provenance": "DEMO_CONFIG",
+      "unit": "m",
+      "value": 1000.0
+    },
+    "point_of_failure_p_fail": {
+      "citation": null,
+      "description": "Segment failure probability at or above which a stretch of road is listed as a point of failure on a route. Every segment of a single-path route is technically one; this threshold, with the bridge test and the no-way-around test, picks out the ones worth an SDMA's attention. It sits near the 95th percentile of segment failure probability in this corridor, so the list names the worst of the road rather than all of it.",
+      "key": "route.point_of_failure_p_fail",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.04
+    },
+    "safest_risk_alpha": {
+      "citation": null,
+      "description": "Risk aversion in the SAFEST objective: minimise time x (1 + alpha x risk).",
+      "key": "route.safest_alpha",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 2.0
+    },
+    "speed_district_road_kmh": {
+      "citation": null,
+      "description": "Free-flow speed assumed on a district road segment.",
+      "key": "route.speed.district_road_kmh",
+      "provenance": "DEMO_CONFIG",
+      "unit": "km/h",
+      "value": 30.0
+    },
+    "speed_national_highway_kmh": {
+      "citation": null,
+      "description": "Free-flow speed assumed on a national highway segment.",
+      "key": "route.speed.national_highway_kmh",
+      "provenance": "DEMO_CONFIG",
+      "unit": "km/h",
+      "value": 50.0
+    },
+    "speed_state_highway_kmh": {
+      "citation": null,
+      "description": "Free-flow speed assumed on a state highway segment.",
+      "key": "route.speed.state_highway_kmh",
+      "provenance": "DEMO_CONFIG",
+      "unit": "km/h",
+      "value": 40.0
+    },
+    "speed_track_kmh": {
+      "citation": null,
+      "description": "Free-flow speed assumed on an unsurfaced track.",
+      "key": "route.speed.track_kmh",
+      "provenance": "DEMO_CONFIG",
+      "unit": "km/h",
+      "value": 10.0
+    },
+    "speed_village_road_kmh": {
+      "citation": null,
+      "description": "Free-flow speed assumed on a village road segment.",
+      "key": "route.speed.village_road_kmh",
+      "provenance": "DEMO_CONFIG",
+      "unit": "km/h",
+      "value": 20.0
+    },
+    "throughput_persons_per_hour": {
+      "citation": null,
+      "description": "Movement throughput ceiling of a single usable route, feeding the ACCESS capacity constraint.",
+      "key": "route.throughput_persons_per_hour",
+      "provenance": "DEMO_CONFIG",
+      "unit": "persons/hour",
+      "value": 400.0
+    }
+  },
+  "validation": {
+    "backtest_background_points": {
+      "citation": null,
+      "description": "Sampled non-incident background points used as negatives in the ROC-AUC back-test of the composite susceptibility surface.",
+      "key": "validation.backtest_background_points",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 2000.0
+    },
+    "rank_stability_top_k": {
+      "citation": null,
+      "description": "Size of the top-k set whose stability under perturbation is reported.",
+      "key": "validation.rank_stability_top_k",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 5.0
+    },
+    "sensitivity_perturbation": {
+      "citation": null,
+      "description": "Fractional perturbation applied to every weight in each Monte Carlo run.",
+      "key": "validation.sensitivity_perturbation",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 0.2
+    },
+    "sensitivity_runs": {
+      "citation": null,
+      "description": "Monte Carlo runs used for weight-sensitivity and rank-stability analysis.",
+      "key": "validation.sensitivity_runs",
+      "provenance": "DEMO_CONFIG",
+      "unit": null,
+      "value": 1000.0
+    }
+  },
+  "version": "1.10.0"
+}

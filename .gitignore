@@ -1,0 +1,54 @@
+# --- secrets ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# --- python ---
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+*.egg-info/
+dist/
+build/
+
+# --- node ---
+node_modules/
+.next/
+out/
+.turbo/
+npm-debug.log*
+pnpm-debug.log*
+.eslintcache
+
+# --- astra runtime state ---
+data/astra.sqlite
+data/astra.sqlite-*
+# Vendored study-area clips ARE committed (fetch once, never at demo time).
+# Only the transient national downloads are ignored.
+data/raw/**/.*.tif
+!data/raw/**/.gitkeep
+
+# --- os / editor ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# build artefacts
+*.tsbuildinfo
+
+# local screenshot/debug scratch
+shot.tmp.mjs
+_shot.mjs
+
+# playwright
+test-results/
+playwright-report/
+blob-report/
+.playwright/

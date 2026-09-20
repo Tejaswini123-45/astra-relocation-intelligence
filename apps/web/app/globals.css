@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+/*
+ * ASTRA visual foundation.
+ *
+ * Emergency operations centre meets scientific instrumentation: a deep,
+ * low-luminance foundation so that map surfaces and hazard colour carry the
+ * meaning, tabular figures everywhere a number appears, and colour used only
+ * semantically - red is reserved for critical risk and nothing else.
+ */
+
+@theme {
+  /* Foundation */
+  --color-abyss: #070b12;
+  --color-surface: #0c1220;
+  --color-surface-raised: #121b2b;
+  --color-surface-inset: #0a101c;
+  --color-line: #1c2739;
+  --color-line-strong: #2a3a52;
+
+  /* Text */
+  --color-ink: #e7eef7;
+  --color-ink-muted: #93a4bc;
+  --color-ink-faint: #61738d;
+
+  /* Severity gradient - designed, not traffic-light */
+  --color-severity-low: #2a6f66;
+  --color-severity-watch: #b99340;
+  --color-severity-elevated: #cd7538;
+  --color-severity-critical: #c0392f;
+
+  /* Semantics */
+  --color-signal: #5b93e6;
+  --color-safe: #3f9c8c;
+  --color-warning: #c69a3e;
+  --color-critical: #c0392f;
+  --color-neutral: #56657d;
+
+  /* Provenance chips */
+  --color-prov-real: #3f9c8c;
+  --color-prov-derived: #5b93e6;
+  --color-prov-synthetic: #9b7fd4;
+  --color-prov-demo: #a8843c;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono-face), ui-monospace, "SF Mono", monospace;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  background-color: var(--color-abyss);
+  color: var(--color-ink);
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Every numeral in ASTRA aligns in its column. */
+.numeric,
+table td.numeric,
+code,
+kbd {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1, "zero" 1;
+}
+
+/* Focus is always visible; the interface is fully keyboard operable. */
+:focus-visible {
+  outline: 2px solid var(--color-signal);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-signal) 35%, transparent);
+}
+
+/* Restrained scrollbars so dense panels stay legible. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-line-strong) transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
